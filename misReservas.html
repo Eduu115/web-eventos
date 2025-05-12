@@ -3,16 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Reservas</title>
-    
+    <title>Mis Reservas - Nombre de web</title>
+    <!-- dependencias -->
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/73cd6cc98d.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- fuente 1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- fuente 2 -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP LOCAL -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+
+    <!-- CSS INTERNO MAIN -->
+    <link rel="stylesheet" href="./static/css/main.css">
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="./static/css/misreservas.css">
 </head>
 <body>
-    <nav class="container-fluid bg-dark">
-        <h1>TESTING MIS RESERVAS</h1>
+    <nav class="container-fluid d-flex">
+        <img src="#" alt="logo" height="20%" width="auto"><h1 class="titulos text-white">TESTING MIS RESERVAS</h1>
     </nav>
+    <!-- INICIO MAIN -->
     <main>
-        
+        <!-- INICIO CONTENEDOR FOREACH SECCION DESTACADOS -->
+        <section id="contenedor-principal-reservas" class="p-3">
+            <div class="encabezado p-1 text-white">
+                <h1>MIS RESERVAS</h1>
+                <p>Reservas realizadas en [nombre_pagina]</p>
+            </div>
+            <div id="seccion-reservas" class="container-fluid p-3 ps-0 d-grid">    
+                <div class="row g-2">
+                    <!-- forEach reservas where usuarioReserva = usuarioActual -->
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 evento-reservado">
+                        <div class="card d-grid ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h5 class="card-title">EVENTO 1</h5>
+                                </div>
+                                <div class="contenedor-descripcion col-8 d-flex justify-content-between">
+                                    <p>
+                                        descripcion
+                                    </p>
+                                    <button class="me-4 button bg-danger">
+                                        eliminar
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <img src="#" alt="img-evento" class="img-evento">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>    
+        </section>
     </main>
+    <!-- FIN MAIN -->
     <footer>
 
     </footer>
