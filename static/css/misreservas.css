@@ -1,0 +1,57 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    overflow-y: scroll;
+}
+nav{
+    max-height: 10%;
+    height: 10%;
+    padding-top: 20px;
+    background-color: #F64001;
+}
+nav img{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+body{
+    background-color: rgb(51, 50, 50);
+}
+
+.titulos{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+}
+.card{
+    background-color: rgb(34, 33, 33);
+    color: white;
+    height: 100%;
+}
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.evento-reservado{
+    height: 1fr;
+}
+#contenedor-principal-reservas{
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+.encabezado{
+    height: 15%;
+}
+
+.row{
+    padding: 40px;
+}
+#seccion-reservas{
+    padding-top: 0;
+}
