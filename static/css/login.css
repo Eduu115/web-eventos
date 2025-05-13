@@ -9,13 +9,27 @@
   background: #2D2F36;
 }
 body {
-  background: white;
+  background: #1E272B;
   font-family: 'Inter UI', sans-serif;
   margin: 0;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100vh;
+}
+nav{
+  max-height: 10%;
+  background-color: #1E272B;
+  align-items: center;
+}
+nav h1{
+  margin: 0;
+}
+#page{
+  max-height: 90%;
 }
 .page {
-  background: #e2e2e5;
+  background: #1E272B;
+  border: #F64001 solid 2px;
   display: flex;
   flex-direction: column;
   height: calc(100% - 40px);
@@ -44,11 +58,12 @@ body {
   }
 }
 .left {
-  background: white;
+  background: #F64001;
   height: calc(100% - 40px);
   top: 20px;
   position: relative;
   width: 50%;
+  color: white;
 }
 @media (max-width: 767px) {
   .left {
@@ -64,13 +79,13 @@ body {
   margin: 50px 40px 40px;
 }
 .eula {
-  color: #999;
+  color: #1E272B;
   font-size: 14px;
   line-height: 1.5;
   margin: 40px;
 }
 .right {
-  background: #474A59;
+  background: #F9F1E8;
   box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
   color: #F1F1F2;
   position: relative;
@@ -99,7 +114,7 @@ path {
   position: absolute;
 }
 label {
-  color:  #c2c2c5;
+  color:  #1E272B;
   display: block;
   font-size: 14px;
   height: 16px;
@@ -109,12 +124,18 @@ label {
 input {
   background: transparent;
   border: 0;
-  color: #f2f2f2;
+  border-radius: 20px;
+  padding-left: 10px;
+  background-color: #e7ddd2;
+  color: #F64001;
   font-size: 20px;
   height: 30px;
   line-height: 30px;
   outline: none !important;
   width: 100%;
+}
+input[type="submit"]{
+  background: none;
 }
 input::-moz-focus-inner { 
   border: 0; 
@@ -125,7 +146,7 @@ input::-moz-focus-inner {
   transition: color 300ms;
 }
 #submit:focus {
-  color: #f2f2f2;
+  color: #F64001;
 }
 #submit:active {
   color: #d0d0d2;
