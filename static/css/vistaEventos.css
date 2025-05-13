@@ -1,0 +1,103 @@
+*{
+    font-family: "Saira", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+nav{
+    max-height: 10%;
+    background-color: #1E272B;
+}
+section{
+    height: 54rem;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 50%);
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+#destacados{    
+    background-color: #F64001;
+    color: white;
+}
+#titulo-destacados{
+    font-style: normal;
+}
+
+.titulo-seccion{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+}
+.subtitulo-seccion{
+    color: #1E272B;
+}
+.ver-mas{
+    color: #1E272B;
+    border: 2px solid #1E272B;
+    border-radius: 0;
+    height: 100px;
+    width: 200px;
+    transform: scale(1);
+    transition: transform;
+    transition-duration: 0.4s;
+}
+.ver-mas:hover{
+    transform: scale(1.2);
+    border: 2px solid #1E272B;
+}
+.contenedor-card{
+    padding: 10px;
+}
+.card{
+    border-radius: 0;
+    height: 100%;
+}
+.card img{
+    max-height: 200px;
+    width: auto;
+}
+
+#activos{
+    background-color: #F9F1E8;
+}
+#titulo-activos{
+    color: #F64001;
+    font-style: italic;
+}
+
+#sold-out{
+    background-color: #1E272B;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    color: #b2afac;
+}
+#titulo-sold-out{
+    font-style: italic;
+    text-decoration: line-through;
+    color: red;
+    text-align: center;
+    padding-right: 7%;
+}
+#subtitulo-seccion-sold-out{
+    color: #b2afac;
+    text-align: right;
+    margin-right: 7%;
+}
+#ver-mas-sold-out{
+    color: #b2afac;
+    border: 2px solid #b2afac;
+    float: right;
+    margin-right: 7%;
+}
+#ver-mas-sold-out:hover{
+    border: 2px solid #b2afac;
+}
+#ver-mas-sold-out:focus{
+    border: 2px solid white;
+    color: white;
+}
