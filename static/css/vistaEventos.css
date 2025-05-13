@@ -24,11 +24,15 @@ section{
     background-color: #F64001;
     color: white;
 }
+#titulo-destacados{
+    font-style: normal;
+}
 
 .titulo-seccion{
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
-    font-size: 80px;
+    font-size: 100px;
+    line-height: 90px;
 }
 .subtitulo-seccion{
     color: #1E272B;
@@ -57,4 +61,43 @@ section{
 .card img{
     max-height: 200px;
     width: auto;
+}
+
+#activos{
+    background-color: #F9F1E8;
+}
+#titulo-activos{
+    color: #F64001;
+    font-style: italic;
+}
+
+#sold-out{
+    background-color: #1E272B;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    color: #b2afac;
+}
+#titulo-sold-out{
+    font-style: italic;
+    text-decoration: line-through;
+    color: red;
+    text-align: center;
+    padding-right: 7%;
+}
+#subtitulo-seccion-sold-out{
+    color: #b2afac;
+    text-align: right;
+    margin-right: 7%;
+}
+#ver-mas-sold-out{
+    color: #b2afac;
+    border: 2px solid #b2afac;
+    float: right;
+    margin-right: 7%;
+}
+#ver-mas-sold-out:hover{
+    border: 2px solid #b2afac;
+}
+#ver-mas-sold-out:focus{
+    border: 2px solid white;
+    color: white;
 }
