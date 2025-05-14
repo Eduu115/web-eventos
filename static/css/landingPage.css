@@ -1,4 +1,5 @@
 /* ─────────────────────  Principal  ───────────────────── */
+/* 
 .hero {
   position: relative;
   min-height: 100vh;
@@ -7,7 +8,6 @@
   align-items: center;
   color: #fff;
 }
-
 
 .hero-content,
 .logo,
@@ -45,7 +45,7 @@
   font-size: 9rem;
   font-weight: 700;
   line-height: 1;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .hero-sub {
@@ -63,11 +63,12 @@
   font-size: 35px;
   padding: 1% 0 1% 0;
   width: 18%;
-}
+} */
 
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
 .about {
-  background: url("../img/Captura\ de\ pantalla\ 2025-05-14\ 130944.png") center/cover;
+  background: url("../img/Captura\ de\ pantalla\ 2025-05-14\ 130944.png")
+    center/cover;
   min-height: 115vh;
   display: flex;
   align-items: center;
@@ -81,7 +82,7 @@
   color: #ff4600;
   margin-bottom: 18%;
   margin-top: -14%;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .about .row {
@@ -91,7 +92,7 @@
 }
 
 .about-card {
-  background: #F9F1E8;
+  background: #f9f1e8;
   font-size: 24px;
   color: #000;
   border: 3px solid #000;
@@ -115,7 +116,7 @@
 .about-card h5 {
   font-weight: 700;
   margin-bottom: 25px;
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue";
   font-size: 34px;
   text-align: center;
   letter-spacing: 2px;
@@ -138,7 +139,7 @@
 .innovation-right {
   flex: 1 1 50%;
   min-height: 420px;
-  background: #F9F1E8;
+  background: #f9f1e8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,7 +151,7 @@
   font-size: 4.5rem;
   font-weight: 900;
   margin-bottom: 35px;
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue";
   margin-top: -36%;
   color: #5d5b5a;
 }
@@ -190,13 +191,8 @@ footer {
 }
 
 .contact-left {
-  background-color: #F64001;
-  width: 50%;
-}
-
-.contact-right {
-  background: #000 url("../img/women-rights-main-image.jpg") center/cover;
-  width: 50%;
+  background-color: #f64001;
+  width: 100%;
 }
 
 video {
@@ -207,4 +203,4 @@ video {
   width: 50%;
   z-index: -1;
   object-fit: cover;
-} 
+}
