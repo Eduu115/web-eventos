@@ -1,56 +1,58 @@
 /* ─────────────────────  Principal  ───────────────────── */
-/* 
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: url("../img/women-rights-main-image.jpg") center/cover;
+
+.imagenDeFondo1 {
+  position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
+  background: url("../img/women-rights-main-image.jpg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  height: 100vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
+  width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
+}
+
+.principal {
   display: flex;
-  align-items: center;
-  color: #fff;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
 }
 
-.hero-content,
-.logo,
-.login-btn,
-.cta-btn {
-  position: relative;
-  z-index: 1;
+.principal2 {
+  padding-bottom: 10%;
 }
 
-.hero-content {
-  margin: 54px;
-  margin-top: 35%;
-}
-
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  gap: 6px;
-}
-
-.login-btn {
-  position: absolute;
-  top: 66px;
-  right: 24px;
-  background: white;
-  color: #f64001;
-  font-size: 35px;
-  margin: 6px 5%;
-  padding: 0.75% 0 0.75% 0;
-  width: 12%;
-}
-
-.hero-title {
-  font-size: 9rem;
+.principal2 h1 {
+  font-size: 83px;
   font-weight: 700;
   line-height: 1;
   font-family: "Bebas Neue", sans-serif;
+  color: white;
 }
 
-.hero-sub {
+.principal2 p {
+  font-size: 31px;
+  font-weight: 500;
+  color: white;
+}
+
+.principal2 p {
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+.login-btn {
+  border-color: #f64001;
+  position: absolute;
+  background: white;
+  color: #f64001;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3sease, color 0.3 sease;
+}
+
+.login-btn:hover {
+  background: #f64001;
+  color: white;
 }
 
 .cta-btn {
@@ -63,9 +65,25 @@
   font-size: 35px;
   padding: 1% 0 1% 0;
   width: 18%;
-} */
+}
+
+.cta-btn:hover {
+  border-color: #f64001;
+  background: white;
+  color: #f64001;
+}
 
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
+
+.imagenDeFondo2 {
+  position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
+  background: url("../img/fondo-azul-naranja.png") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  height: 100vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
+  width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
+}
+
+/* 
 .about {
   background: url("../img/Captura\ de\ pantalla\ 2025-05-14\ 130944.png")
     center/cover;
@@ -120,9 +138,11 @@
   font-size: 34px;
   text-align: center;
   letter-spacing: 2px;
-}
+} */
 
 /* ─────────────────────  INNOVACIÓN  ───────────────────── */
+
+/* 
 .innovation {
   display: flex;
   flex-wrap: wrap;
@@ -182,19 +202,8 @@
   font-size: 22px;
   text-align: center;
   color: #818180;
-}
-
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 110vh;
-}
-
-.contact-left {
-  background-color: #f64001;
-  width: 100%;
-}
-
+} 
+  
 video {
   position: fixed;
   left: 0;
@@ -204,3 +213,17 @@ video {
   z-index: -1;
   object-fit: cover;
 }
+*/
+
+/* CONTACTO */
+
+/* footer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 110vh;
+}
+
+.contact-left {
+  background-color: #f64001;
+  width: 100%;
+} */
