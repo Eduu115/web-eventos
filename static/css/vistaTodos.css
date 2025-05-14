@@ -1,0 +1,46 @@
+body{
+    background-color: #1E272B;
+    color: white;
+}
+nav h1{
+    margin: 0;
+}
+#titulo-todos{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 90px;
+    color: #F64001;
+    font-style: italic;
+}
+main{
+    min-height: 90%;
+    max-height: max-content;
+}
+nav{
+    border-bottom: 2px solid white;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 60px;
+}
+.contenedor-seccion{
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 0;
+    max-width: 30rem;
+}
+
+#contenedor-secciones{
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
