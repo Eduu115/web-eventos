@@ -1,9 +1,3 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  color: #111;
-}
-
 /* ─────────────────────  Principal  ───────────────────── */
 .hero {
   position: relative;
@@ -14,15 +8,6 @@ body {
   color: #fff;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
 
 .hero-content,
 .logo,
@@ -32,31 +17,35 @@ body {
   z-index: 1;
 }
 
+.hero-content {
+  margin: 54px;
+  margin-top: 35%;
+}
+
 .logo {
   position: absolute;
   top: 20px;
   left: 24px;
-  display: flex;
-  align-items: center;
   gap: 6px;
-  color: #fff;
-  font-weight: bold;
 }
 
 .login-btn {
   position: absolute;
-  top: 54px;
+  top: 66px;
   right: 24px;
   background: white;
   color: #f64001;
-  font-size: 20px;
+  font-size: 35px;
+  margin: 6px 5%;
+  padding: 0.75% 0 0.75% 0;
+  width: 12%;
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 9rem;
+  font-weight: 700;
   line-height: 1;
-  margin-top: 35%;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .hero-sub {
@@ -70,63 +59,66 @@ body {
   bottom: 32px;
   background: #f64001;
   color: white;
+  margin: 5%;
+  font-size: 35px;
+  padding: 1% 0 1% 0;
+  width: 18%;
 }
 
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
 .about {
-  background: linear-gradient(170deg, #1c1c1c 55%, #ff4600 55%);
-  min-height: 100vh;
+  background: url("../img/Captura\ de\ pantalla\ 2025-05-14\ 130944.png") center/cover;
+  min-height: 115vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 70px 0;
-  color: #fff;
-  text-align: center;
+  justify-content: space-around;
 }
 
 .about h2 {
-  font-size: 3rem;
+  font-size: 7rem;
   font-style: italic;
   font-weight: 900;
   color: #ff4600;
-  margin-bottom: 15%;
+  margin-bottom: 18%;
+  margin-top: -14%;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .about .row {
-  width: 100%;
+  width: 125vh;
   flex: 1;
+  height: fit-content;
 }
 
 .about-card {
-  background: #fff;
+  background: #F9F1E8;
+  font-size: 24px;
   color: #000;
   border: 3px solid #000;
   border-radius: 16px;
-  padding: 90px 24px 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 100px 35px 95px;
   position: relative;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .avatar {
-  width: 140px;
-  height: 140px;
+  width: 225px;
+  height: 226px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
-  top: -70px;
+  top: -162px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .about-card h5 {
-  font-weight: 900;
-  margin-bottom: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: 'Bebas Neue';
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 /* ─────────────────────  INNOVACIÓN  ───────────────────── */
@@ -140,13 +132,13 @@ body {
 .innovation-left {
   flex: 1 1 50%;
   min-height: 420px;
-  background: #000 url("../img/women-rights-main-image.jpg") center/cover;
+  background: url("../img/videofondo.mp4") center/cover;
 }
 
 .innovation-right {
   flex: 1 1 50%;
   min-height: 420px;
-  background: #f3f3f3;
+  background: #F9F1E8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,16 +147,19 @@ body {
 }
 
 .innovation-right h3 {
-  font-size: 1.5rem;
+  font-size: 4.5rem;
   font-weight: 900;
-  margin-bottom: 18px;
+  margin-bottom: 35px;
+  font-family: 'Bebas Neue';
+  margin-top: -36%;
+  color: #5d5b5a;
 }
 
 .grid-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 24px;
+  gap: 55px;
+  padding: 112px;
 }
 
 .innovation-card {
@@ -181,3 +176,35 @@ body {
   justify-content: center;
   opacity: 0.7;
 }
+
+.innovation-right p {
+  font-size: 22px;
+  text-align: center;
+  color: #818180;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 110vh;
+}
+
+.contact-left {
+  background-color: #F64001;
+  width: 50%;
+}
+
+.contact-right {
+  background: #000 url("../img/women-rights-main-image.jpg") center/cover;
+  width: 50%;
+}
+
+video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+  object-fit: cover;
+} 
