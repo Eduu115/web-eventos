@@ -6,23 +6,13 @@ body{
     overflow-y: scroll;
 }
 nav{
-    max-height: 10%;
-    height: 10%;
-    padding-top: 20px;
     background-color: #F64001;
 }
-nav img{
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
 body{
     background-color: rgb(51, 50, 50);
 }
 
-.titulos{
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
-}
 .card{
     background-color: rgb(34, 33, 33);
     color: white;
