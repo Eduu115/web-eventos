@@ -46,7 +46,6 @@ body {
     background-color: #F64001;
 }
 
-
 .imagen img, .imagen1 img {
     width: 100%;
     height: auto;
@@ -81,3 +80,18 @@ nav{
     max-height: 10%;
     background-color: #1E272B;
 }
+
+body{
+    height: 100vh;
+}
+.titulos{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Saira", sans-serif;
+    font-weight: 400;
+}
+nav{
+    max-height: 10%;
+    min-height: 10%;
+    align-items: center;
+}
+
