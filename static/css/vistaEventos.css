@@ -1,13 +1,8 @@
-*{
-    font-family: "Saira", sans-serif;
-}
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
 }
 nav{
-    max-height: 10%;
     background-color: #1E272B;
 }
 section{
@@ -70,7 +65,7 @@ section{
     color: #F64001;
     font-style: italic;
 }
-
+/* SOLD OUT (muy concreto porque cambia casi todo de colores y demas) */
 #sold-out{
     background-color: #1E272B;
     grid-template-columns: 1fr 1fr 1.2fr;
