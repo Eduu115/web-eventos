@@ -1,0 +1,8 @@
+[
+
+    { "id": 1, "nombre": "Concierto kidd keo",  "apm": "12000", "estado":"activo", "descripcion":"Concierto kidd keo", "fecha_inicio":"25 mayo", "duracion": "2", "destacado":"S", "precio": "30" },
+    { "id": 2, "nombre": "Festival Indie Madrid", "apm": "15000", "estado": "activo", "descripcion": "Festival de música indie con bandas emergentes", "fecha_inicio": "8 junio", "duracion": "3", "destacado": "N", "precio": "45" },
+    { "id": 3, "nombre": "Teatro Clásico - Don Juan Tenorio", "apm": "8000", "estado": "activo", "descripcion": "Representación teatral del clásico Don Juan Tenorio", "fecha_inicio": "12 julio", "duracion": "1", "destacado": "S", "precio": "25" },
+    { "id": 4, "nombre": "Noche Electrónica en la Playa", "apm": "20000", "estado": "activo", "descripcion": "Evento de música electrónica con DJs internacionales", "fecha_inicio": "30 agosto", "duracion": "1", "destacado": "S", "precio": "50" }
+
+]
