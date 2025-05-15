@@ -73,6 +73,10 @@
   color: #f64001;
 }
 
+.boton-inicio {
+  max-width: fit-content;
+}
+
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
 
 .imagenDeFondo2 {
@@ -93,7 +97,7 @@
 
 .quienesSomos {
   margin-bottom: 15%;
-  padding-top: 6%;
+  padding-top: 4%;
 }
 
 .card {
@@ -128,6 +132,16 @@
 
 .card-body p {
   text-align: justify;
+}
+span{
+  float: right;
+}
+.boton-flecha-cont{
+  align-self: end;
+}
+.boton-flecha-elemento{
+  background-color: #f9f1e8;
+  border-radius: 15px;
 }
 /* ─────────────────────  INNOVACIÓN  ───────────────────── */
 
