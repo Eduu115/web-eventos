@@ -2,7 +2,7 @@
 
 .imagenDeFondo1 {
   position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
-  background: url("../img/women-rights-main-image.jpg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
+  background: url("../img/jeo.jpg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
   background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
   height: 100vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
   width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
@@ -126,6 +126,9 @@
   letter-spacing: 2px;
 }
 
+.card-body p {
+  text-align: justify;
+}
 /* ─────────────────────  INNOVACIÓN  ───────────────────── */
 
 .innovation {
@@ -152,7 +155,7 @@
 }
 
 .innovation-right p {
-  font-size: 22px;
+  font-size: 28px;
   text-align: center;
   color: #818180;
 }
@@ -176,10 +179,15 @@ video {
 
 .innovation-card {
   background: gray;
-  color: #000;
+  color: #c5c5c5;
   border-radius: 10px;
-  padding: 90px 27px 40px;
-  opacity: 0.7;
+  padding: 60px 30px 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.innovation-description {
+  width: 65%;
+  font-size: 3px;
 }
 
 /* CONTACTO */
@@ -197,12 +205,29 @@ footer {
   height: 100vh;
   /* border-right: 1px solid black; */
 }
-.redesSociales {
-}
 
 .responsables {
   border-left: 1px solid black;
 }
 
 .contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.redesSociales a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 15px;
+}
+.redesSociales a:hover {
+  font-weight: 700;
+}
+
+.redesSociales i {
+  font-size: 20px;
+}
+.responsables h4 {
+  font-size: 30px;
 }
