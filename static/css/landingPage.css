@@ -202,8 +202,6 @@ footer {
   height: 100vh;
   /* border-right: 1px solid black; */
 }
-.redesSociales {
-}
 
 .responsables {
   border-left: 1px solid black;
@@ -212,4 +210,21 @@ footer {
 .contacto {
   display: flex;
   justify-content: center;
+}
+
+.redesSociales a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 15px;
+}
+.redesSociales a:hover {
+  font-weight: 700;
+}
+
+.redesSociales i {
+  font-size: 20px;
+}
+.responsables h4 {
+  font-size: 30px;
 }
