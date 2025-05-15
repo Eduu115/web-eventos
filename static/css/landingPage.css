@@ -79,48 +79,34 @@
   position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
   background: url("../img/fondo-azul-naranja.png") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
   background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
-  height: 100vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
+  height: 115vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
   width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
 }
 
-/* 
-.about {
-  background: url("../img/Captura\ de\ pantalla\ 2025-05-14\ 130944.png")
-    center/cover;
-  min-height: 115vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.about h2 {
+.sobreNosotros h2 {
   font-size: 7rem;
   font-style: italic;
-  font-weight: 900;
-  color: #ff4600;
-  margin-bottom: 18%;
-  margin-top: -14%;
+  font-weight: 700;
+  color: #f64001;
   font-family: "Bebas Neue", sans-serif;
 }
 
-.about .row {
-  width: 125vh;
-  flex: 1;
-  height: fit-content;
+.quienesSomos {
+  margin-bottom: 15%;
+  padding-top: 6%;
 }
 
-.about-card {
+.card {
   background: #f9f1e8;
-  font-size: 24px;
+  font-size: 21px;
   color: #000;
   border: 3px solid #000;
   border-radius: 16px;
-  padding: 100px 35px 95px;
+  padding: 69px 10px 55px;
   position: relative;
-  height: 100%;
+  height: max-content;
 }
-
-.avatar {
+.card-img-top {
   width: 225px;
   height: 226px;
   border-radius: 50%;
@@ -131,49 +117,54 @@
   transform: translateX(-50%);
 }
 
-.about-card h5 {
+.card-title {
   font-weight: 700;
   margin-bottom: 25px;
   font-family: "Bebas Neue";
   font-size: 34px;
   text-align: center;
   letter-spacing: 2px;
-} */
+}
 
 /* ─────────────────────  INNOVACIÓN  ───────────────────── */
 
-/* 
 .innovation {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  align-items: stretch;
-}
-
-.innovation-left {
-  flex: 1 1 50%;
-  min-height: 420px;
-  background: url("../img/videofondo.mp4") center/cover;
+  height: 115vh;
 }
 
 .innovation-right {
-  flex: 1 1 50%;
-  min-height: 420px;
   background: #f9f1e8;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
+  flex-direction: column;
 }
 
 .innovation-right h3 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 35px;
   font-family: "Bebas Neue";
-  margin-top: -36%;
+  margin-top: -26%;
   color: #5d5b5a;
+}
+
+.innovation-right p {
+  font-size: 22px;
+  text-align: center;
+  color: #818180;
+}
+
+video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .grid-cards {
@@ -187,43 +178,31 @@
   background: gray;
   color: #000;
   border-radius: 10px;
-  padding: 90px 24px 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 90px 27px 40px;
   opacity: 0.7;
 }
 
-.innovation-right p {
-  font-size: 22px;
-  text-align: center;
-  color: #818180;
-} 
-  
-video {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-  z-index: -1;
-  object-fit: cover;
-}
-*/
-
 /* CONTACTO */
 
-/* footer {
-  display: flex;
-  flex-wrap: wrap;
+footer {
+  background-color: #f64001;
   min-height: 110vh;
 }
 
-.contact-left {
-  background-color: #f64001;
-  width: 100%;
-} */
+.informacionContacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* border-right: 1px solid black; */
+}
+.redesSociales {
+}
+
+.responsables {
+  border-left: 1px solid black;
+}
+
+.contacto {
+}
