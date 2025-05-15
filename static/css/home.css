@@ -1,24 +1,38 @@
 /* CSS HOME */
-body {
-  background-color: #f5f5dc;
-  font-family: "Saira", sans-serif;
-  margin: 0;
-  padding: 0;
+nav {
+  align-items: center;
+  background: #1e272b;
+  border-bottom: 2px solid #f64001;
+  padding-bottom: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+nav h1 {
+  margin-top: 9px;
+}
+
+main {
+  background: #1e272b;
+  height: 90vh;
 }
 
 .main-title {
-  font-family: "Saira", sans-serif;
   font-weight: 900;
   text-align: center;
   color: #f64001;
-  margin-top: 40px;
-  font-size: 36px;
+  padding-top: 23px;
+  font-size: 45px;
+  letter-spacing: 2px;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 10%;
   margin-top: 50px;
 }
 
@@ -30,36 +44,18 @@ body {
   background-color: #f64001;
   color: white;
   padding: 15px 30px;
-  border: none;
+  border: 1px solid #f64001;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 25px;
   width: 200px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .opcion button:hover {
-  background-color: #f64001;
-}
-
-.imagen img,
-.imagen1 img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-footer {
-  background-color: #f64001;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 18px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+  background-color: white;
+  color: #f64001;
 }
 
 .imagen img,
@@ -72,7 +68,14 @@ footer {
   margin-top: 15px;
 }
 
-nav {
-  max-height: 10%;
-  background-color: #1e272b;
+.footerMessage {
+  background-color: #f64001;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 22px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
