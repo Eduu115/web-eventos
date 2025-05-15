@@ -72,10 +72,11 @@ main {
   background-color: #f64001;
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: 25px;
   font-size: 22px;
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
+  max-height: 15%;
 }
