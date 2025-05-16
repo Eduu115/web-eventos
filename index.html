@@ -33,17 +33,17 @@
     <body>
         <!-- ============== Principal ============== -->
         <header class="imagenDeFondo1">
-            <div class="container principal">
+            <div class="container-fluid principal">
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-6">
                         <img src="./static/img/LogoBannerSF500x200.png" alt="logo" height="150px" width="auto">
                     </div>
-                    <div class="col-6 d-flex justify-content-end">
+                    <div class="col-6 d-flex justify-content-end pe-5">
                         <a href="login.html" class="btn rounded-pill fw-bold px-5 py-2 login-btn titulos">ENTRAR <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                     </div>
                 </div>
 
-                <div class="row  d-flex justify-content-between align-items-center principal2">
+                <div class="row d-flex justify-content-between align-items-center principal2">
                     <div class="col-6">
                         <div>
                             <h1 class="">EVENTOS SIN <br>RODEOS</h1>
@@ -59,18 +59,18 @@
         </header>
 
         <!-- ============== QUIÉNES SOMOS ============== -->
-        <section  class="imagenDeFondo2">
-            <div class="container sobreNosotros">
-                <div class="row quienesSomos">
+        <section  class="imagenDeFondo2" >
+            <div class="container sobreNosotros" id="quienes-somos">
+                <div class="row quienesSomos" >
                     <div class="col-12">
-                        <h2 id="quienes-somos">QUIENES SOMOS</h2>
+                        <h2 >QUIENES SOMOS</h2>
                     </div>
                 </div>
 
                 <div class="row mt-3">
                     <div class="col-4">
-                        <div class="card">
-                            <img src="./static/img/capybaraRap2SF.png" class="card-img-top" alt="Moto" height="150px"
+                        <div class="card mx-3">
+                            <img src="./static/img/vision.png" class="card-img-top vision" alt="Moto" height="auto"
                                 width="auto">
                             <div class="card-body">
                                 <h5 class="card-title titulos">VISIÓN</h5>
@@ -80,9 +80,9 @@
                         </div>
                     </div>
 
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="./static/img/capybaraRap2SF.png" class="card-img-top" alt="Moto" height="150px"
+                    <div class="col-4 ">
+                        <div class="card mx-3">
+                            <img src="./static/img/values.png" class="card-img-top valores" alt="Moto" height="auto"
                                 width="auto">
                             <div class="card-body">
                                 <h5 class="card-title titulos">VALORES</h5>
@@ -95,8 +95,8 @@
                     </div>
 
                     <div class="col-4">
-                        <div class="card">
-                            <img src="./static/img/capybaraRap2SF.png" class="card-img-top" alt="Moto" height="150px"
+                        <div class="card mx-3">
+                            <img src="./static/img/maleantes.png" class="card-img-top equipo" alt="Moto" height="auto"
                                 width="auto">
                             <div class="card-body">
                                 <h5 class="card-title titulos">EQUIPO</h5>
@@ -109,7 +109,7 @@
                 <div class="row boton-flecha-cont pt-3">
                     <div class="col-12">
                         <a href="#video-stats">
-                            <span class="boton-flecha-elemento btn ">CONTINUA <i class="fa-solid fa-arrow-down"></i></span>
+                            <span class="boton-flecha-elemento titulos ">CONTINUA <i class="fa-solid fa-arrow-down"></i></span>
                         </a>
                     </div>    
                 </div>
@@ -154,6 +154,9 @@
                                 Nos cargamos las reservas aburridas. Hacemos que organizar eventos sea fácil, rápido y
                                 sin complicaciones. Nada de rollos, solo lo que necesitas, cuando lo necesitas.
                             </p>
+                            <a href="#footer">
+                                <span class="boton-flecha-elemento titulos ">CONTACTO <i class="fa-solid fa-arrow-down"></i></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +167,7 @@
         </section>
 
         <footer>
-            <div class="container">
+            <div id="footer" class="container">
                 <div class="row informacionContacto">
                     <div class="col-2 redesSociales">
                         <div>
@@ -193,7 +196,8 @@
                         </div>
                     </div>
                     <div class="col-7 contacto">
-                        <img src="./static/img/capybaraRapSF.png" alt="">
+                        <img src="./static/img/aboutus.png" alt="" class="about-us">
+                        
                     </div>
                 </div>
             </div>
