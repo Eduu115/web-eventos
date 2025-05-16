@@ -82,6 +82,26 @@
   max-width: fit-content;
 }
 
+.vision{
+  margin-top: 5%;
+  width: 230px;
+  height: 230px;
+}
+
+.valores {
+  margin-top: 0%;
+  width: 197px;
+  height: 284px;
+}
+
+.equipo {
+  margin-top: -3%;
+  width: 239px;
+  height: 333px;
+}
+
+
+
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
 
 .imagenDeFondo2 {
@@ -239,7 +259,6 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* border-right: 1px solid black; */
 }
 
 .responsables {
@@ -266,4 +285,8 @@ footer {
 }
 .responsables h4 {
   font-size: 30px;
+}
+
+.about-us {
+  width: 70%;
 }
