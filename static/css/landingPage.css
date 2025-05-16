@@ -97,7 +97,7 @@
 
 .quienesSomos {
   margin-bottom: 15%;
-  padding-top: 4%;
+  padding-top: 12%;
 }
 
 .card {
@@ -188,18 +188,21 @@ video {
 .grid-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  padding: 112px;
+  gap: 44% 11%;
+  padding: 18% 10% 40% 10%;
 }
 
 .innovation-card {
-  background: gray;
   color: #c5c5c5;
   border-radius: 10px;
   padding: 60px 30px 40px;
   background-color: rgba(0, 0, 0, 0.6);
+  font-size: 17px;
 }
 
+.innovation-card h2 {
+font-size: 34px;
+}
 .innovation-description {
   width: 65%;
   font-size: 3px;
