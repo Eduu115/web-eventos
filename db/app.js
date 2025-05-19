@@ -7,19 +7,24 @@ fetch('http://localhost:9003/evento/todos')
     renderizarReservas();
 });
 
+function eliminarReserva(idEvento) {
+  fetch(`http://localhost:9003/eliminar/${idEvento}`, {
+    method: 'DELETE'
+  })
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json(); // o simplemente return;
+    })
+    .then(() => {
+      // filtremos por el id correcto
+      reservas = reservas.filter(ev => ev.idEvento !== idEvento);
+      renderizarReservas();
+    })
+    .catch(err => console.error('Error al eliminar:', err));
+}
+
 //------------------------Trabajamos con el array olvidando el JSON
 // CRUD
-function agregarReserva(datos) {
-  const id = reservas.length ? reservas[reservas.length - 1].id + 1 : 1;
-  reservas.push({ id, ...datos, usuarioReserva: usuarioActual });
-}
-function editarReserva(id, nuevosDatos) {
-  const idx = reservas.findIndex(r => r.id === id);
-  if (idx !== -1) reservas[idx] = { ...reservas[idx], ...nuevosDatos };
-}
-function eliminarReserva(id) {
-  reservas = reservas.filter(r => r.id !== id);
-}
 
 // 3. Renderizado en DOM
 function renderizarReservas() {
@@ -43,18 +48,26 @@ function renderizarReservas() {
             <p>APM : ${r.aforoMaximo}</p>
           </div>
           <div class="contenedor-botones col-5 d-flex justify-content-center">
-            <button class="me-4 button btn-edit" data-id="${r.idEvento}">Editar</button>
-            <button class="me-4 button btn-delete" data-id="${r.idEvento}">Eliminar</button>
-            <button class="me-4 button btn-view" data-id="${r.idEvento}">Ver detalles</button>
+              <button class="me-4 button btn-edit" data-id="${r.idEvento}">Editar</button>
+              <button class="me-4 button btn-delete" data-id="${r.idEvento}">Eliminar</button>
+              <button class="me-4 button btn-view" data-id="${r.idEvento}">Ver detalles</button>
           </div>
           <div class="col-2 seccion-imagen">
-            <img src="${r.imagen}" alt="imagen-evento">
+            <img src="#" alt="imagen-evento">
           </div>
         </div>
       </div>
     `;
+    
+    row.querySelectorAll('.btn-delete').forEach(btn =>
+      btn.addEventListener('click', () => eliminarReserva(r.idEvento))
+    );
+    
     row.appendChild(col);
+    
   });
 }
+
+
 // inicializar render
 renderizarReservas();
