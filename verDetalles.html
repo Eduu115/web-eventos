@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verDetalles</title>
+    <!-- dependencias -->
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/73cd6cc98d.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- fuente 1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- fuente 2 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- BOOTSTRAP LOCAL -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+
+    <!-- CSS INTERNO MAIN -->
+    <link rel="stylesheet" href="./static/css/main.css">
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="./static/css/verDetalles.css">
+</head>
+
+<body>
+    <nav class="container-fluid d-flex">
+        <img src="./static/media/img/SoloTipoSF.png" alt="logo" height="100%" width="auto">
+        <h1 class="titulos text-white">
+            ADMIN DASHBOARD
+        </h1>
+    </nav>
+    <!-- INICIO MAIN -->
+    <main>
+        <section class="p-3 d-flex justify-content-center">
+            <div class="evento-container">
+                <h1 class="evento-titulo">Nombre del Evento</h1>
+
+                <div class="evento-contenido">
+                    <img src="./static/media/img/CONCIERTOS/309460410_432592522340478_6540369282769673093_n.jpg"
+                        class="evento-img" alt="Foto del Evento">
+
+                    <div class="evento-detalles">
+                        <div class="detalle-columna">
+                            <p><strong>Descripción:</strong>
+                                <span>Concierto enérgico que reúne a artistas internacionales del hardcore y rap
+                                    alternativo. Un evento único para los amantes de la música intensa y el mosh pit sin
+                                    censura.</span>
+                            </p>
+                            <p><strong>Fecha de Inicio:</strong> <span>2025-06-12</span></p>
+                            <p><strong>Fecha de Alta:</strong> <span>2025-05-01</span></p>
+                            <p><strong>Duración:</strong> <span>2 horas y 30 minutos</span></p>
+                            <p><strong>Dirección:</strong> <span>Calle Fuego 88, Nave Industrial 7, Madrid</span></p>
+                        </div>
+
+                        <div class="detalle-columna">
+                            <p><strong>Aforo Máximo:</strong> <span>850 personas</span></p>
+                            <p><strong>Precio:</strong> <span>25 € anticipada / 30 € taquilla</span></p>
+                            <p><strong>Estado:</strong> <span>Confirmado</span></p>
+                            <p><strong>Destacado:</strong> <span>Sí</span></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- FIN MAIN -->
+
+    <!-- Cargamos script db -->
+    <script src="./db/app.js"></script>
+</body>
+
+</html>

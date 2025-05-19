@@ -1,107 +1,133 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
-nav{
-    background-color: #1E272B;
+nav {
+  background-color: #1e272b;
 }
 nav a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-  nav h1 {
-    margin-top: 9px;
-  }
-  
-section{
-    height: 54rem;
-    padding-left: 20px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    grid-template-rows: repeat(2, 50%);
-    gap: 10px;
-    padding-bottom: 20px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+nav h1 {
+  margin-top: 9px;
 }
 
-#destacados{    
-    background-color: #F64001;
-    color: white;
-}
-#titulo-destacados{
-    font-style: normal;
-}
-
-.titulo-seccion{
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
-    font-size: 100px;
-    line-height: 90px;
-}
-.subtitulo-seccion{
-    color: #1E272B;
-}
-.ver-mas{
-    color: #1E272B;
-    border: 2px solid #1E272B;
-    border-radius: 0;
-    height: 100px;
-    width: 200px;
-    transform: scale(1);
-    transition: transform;
-    transition-duration: 0.4s;
-}
-.ver-mas:hover{
-    transform: scale(1.2);
-    border: 2px solid #1E272B;
-}
-.contenedor-card{
-    padding: 10px;
-}
-.card{
-    border-radius: 0;
-    height: 100%;
-}
-.card img{
-    max-height: 200px;
-    width: auto;
+section {
+  height: 54rem;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 50%);
+  gap: 10px;
+  padding-bottom: 20px;
 }
 
-#activos{
-    background-color: #F9F1E8;
+#destacados {
+  background-color: #f64001;
+  color: white;
 }
-#titulo-activos{
-    color: #F64001;
-    font-style: italic;
+#titulo-destacados {
+  font-style: normal;
+}
+
+.titulo-seccion {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 90px;
+}
+.subtitulo-seccion {
+  color: #1e272b;
+}
+.ver-mas {
+  color: #1e272b;
+  border: 2px solid #1e272b;
+  border-radius: 0;
+  height: 100px;
+  width: 200px;
+  transform: scale(1);
+  transition: transform;
+  transition-duration: 0.4s;
+}
+.ver-mas:hover {
+  transform: scale(1.2);
+  border: 2px solid #1e272b;
+}
+.contenedor-card {
+  padding: 10px;
+}
+.card {
+  border-radius: 10px;
+  height: 100%;
+  border: 1.5px solid rgb(0, 0, 0);
+  box-shadow: 9px 13px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+.card img {
+  max-height: 70%;
+  width: auto;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.card-body {
+  max-height: 30%;
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+  background-color: #1e272b;
+  color: #c8c8c8;
+  text-align: center;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.card-body h5 {
+  color: white;
+}
+.card-body p {
+  text-align: justify;
+}
+.card:hover {
+  transform: scale(1.05);
+  border: 3px solid white;
+  cursor: pointer;
+}
+#activos {
+  background-color: #f9f1e8;
+}
+#titulo-activos {
+  color: #f64001;
+  font-style: italic;
 }
 /* SOLD OUT (muy concreto porque cambia casi todo de colores y demas) */
-#sold-out{
-    background-color: #1E272B;
-    grid-template-columns: 1fr 1fr 1.2fr;
-    color: #b2afac;
+#sold-out {
+  background-color: #1e272b;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  color: #b2afac;
 }
-#titulo-sold-out{
-    font-style: italic;
-    text-decoration: line-through;
-    color: red;
-    text-align: center;
-    padding-right: 7%;
+#titulo-sold-out {
+  font-style: italic;
+  text-decoration: line-through;
+  color: red;
+  text-align: center;
+  padding-right: 7%;
 }
-#subtitulo-seccion-sold-out{
-    color: #b2afac;
-    text-align: right;
-    margin-right: 7%;
+#subtitulo-seccion-sold-out {
+  color: #b2afac;
+  text-align: right;
+  margin-right: 7%;
 }
-#ver-mas-sold-out{
-    color: #b2afac;
-    border: 2px solid #b2afac;
-    float: right;
-    margin-right: 7%;
+#ver-mas-sold-out {
+  color: #b2afac;
+  border: 2px solid #b2afac;
+  float: right;
+  margin-right: 7%;
 }
-#ver-mas-sold-out:hover{
-    border: 2px solid #b2afac;
+#ver-mas-sold-out:hover {
+  border: 2px solid #b2afac;
 }
-#ver-mas-sold-out:focus{
-    border: 2px solid white;
-    color: white;
+#ver-mas-sold-out:focus {
+  border: 2px solid white;
+  color: white;
 }
