@@ -1,6 +1,6 @@
 let reservas = [];
 // fetch cargamos los datos
-fetch('/db/datos.json')
+fetch('http://localhost:9003/evento/todos')
   .then(res => res.json())
   .then(data => {
     reservas = data;
@@ -38,14 +38,14 @@ function renderizarReservas() {
             <h5 class="card-title">${r.nombre}</h5>
           </div>
           <div class="contenedor-info col-4">
-            <p>id : ${r.id}</p>
+            <p>id : ${r.idEvento}</p>
             <p>Estado : ${r.estado}</p>
-            <p>APM : ${r.apm}</p>
+            <p>APM : ${r.aforoMaximo}</p>
           </div>
           <div class="contenedor-botones col-5 d-flex justify-content-center">
-            <button class="me-4 button btn-edit" data-id="${r.id}">Editar</button>
-            <button class="me-4 button btn-delete" data-id="${r.id}">Eliminar</button>
-            <button class="me-4 button btn-view" data-id="${r.id}">Ver detalles</button>
+            <button class="me-4 button btn-edit" data-id="${r.idEvento}">Editar</button>
+            <button class="me-4 button btn-delete" data-id="${r.idEvento}">Eliminar</button>
+            <button class="me-4 button btn-view" data-id="${r.idEvento}">Ver detalles</button>
           </div>
           <div class="col-2 seccion-imagen">
             <img src="${r.imagen}" alt="imagen-evento">
