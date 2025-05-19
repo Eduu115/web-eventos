@@ -2,7 +2,7 @@
 
 .imagenDeFondo1 {
   position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
-  background: url("../img/concert.jpg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
+  background: url("../media/img/upscalemedia-transformed.jpeg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
   background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
   height: 100vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
   width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
@@ -106,7 +106,7 @@
 
 .imagenDeFondo2 {
   position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
-  background: url("../img/fondo-azul-naranja.png") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
+  background: url("../media/img/fondo-azul-naranja.png") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
   background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
   height: 115vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
   width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
