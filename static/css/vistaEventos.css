@@ -18,9 +18,7 @@ section {
   height: 54rem;
   padding-left: 20px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-template-rows: repeat(2, 50%);
-  gap: 10px;
+  grid-template-columns: 30% 1fr;
   padding-bottom: 20px;
 }
 

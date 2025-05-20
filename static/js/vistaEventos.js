@@ -1,10 +1,12 @@
-let eventos = [];
+let reservas = [];
 // fetch cargamos los datos
-fetch('/db/datos.json')
+fetch('http://localhost:9003/evento/todos')
   .then(res => res.json())
   .then(data => {
-    eventos = data;
+    reservas = data;
 });
-let eventosDestacados = eventos.filter(evento => evento.destacado == "S");
-console.log(eventosDestacados);
-//------------------------Trabajamos con el array olvidando el JSON
+
+const subCol1 = document.getElementById("fila-eventos-destacados").querySelector("col-6 sub-columna1-eventos");
+
+console.log(reservas);
+

@@ -41,11 +41,11 @@
     <main>
         <!-- SECCION DESTACADOS -->
         <section id="destacados" class="pt-3">
-            <!-- FILA 1 -->
-            <div>
+            <!-- COLUMNA TITULO Y DEMAS -->
+            <div class="columna-titulo">
                 <h1 class="titulo-seccion mt-2" id="titulo-destacados">
-                    EVENTOS <br>
-                    DESTACADOS
+                EVENTOS <br>
+                DESTACADOS
                 </h1>
                 <h3 class="subtitulo-seccion">
                     Encuentra los eventos que mas destacan <br> entre gente con mucho gusto como tú
@@ -53,59 +53,30 @@
                 <a href="vistaTodos.html#contenedor-destacados">
                     <button class="mt-4 ms-1 ver-mas btn">VER TODOS</button>
                 </a>
+                
+                
+                
             </div>
-            <div class="contenedor-card">
-                <!-- CARD 1 -->
-                <div class="card">
-                    <img src="./static/media/img/CONCIERTOS/11082018_boilerroomatl288of354.jpg" class="card-img-top"
-                        alt="FotoEvento1">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-card">
-                <!-- CARD 2 -->
-                <div class="card">
-                    <img src="./static/media/img/CONCIERTOS/11082018_boilerroomatl288of354.jpg" class="card-img-top"
-                        alt="FotoEvento1">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- FILA 2 -->
-            <div>
+            <!-- FIN COLUMNA TITULO -->
+            <!-- COLUMNA EVENTOS -->
+            <div class="columna-eventos">
+                <!-- FILA -->
+                <div class="row" id="fila-eventos-destacados">
+                    <!-- COLUMNA 1 -->
+                    <div class="col-6 sub-columna1-eventos">
 
-            </div>
-            <div class="contenedor-card">
-                <!-- CARD 3 -->
-                <div class="card">
-                    <img src="./static/media/img/CONCIERTOS/11082018_boilerroomatl288of354.jpg" class="card-img-top"
-                        alt="FotoEvento1">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
                     </div>
-                </div>
-            </div>
-            <div class="contenedor-card">
-                <!-- CARD 4 -->
-                <div class="card">
-                    <img src="./static/media/img/CONCIERTOS/11082018_boilerroomatl288of354.jpg" class="card-img-top"
-                        alt="FotoEvento1">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card’s content.</p>
+                    <!-- FIN COLUMNA 1 -->
+                    
+                    <!-- COLUMNA 2 -->
+                    <div class="col-6 sub-columna2-eventos">
+                        
                     </div>
+                    <!-- FIN COLUMNA 2-->
                 </div>
+                <!-- FIN FILA -->
             </div>
+            <!-- FIN COLUMNA EVENTOS -->
         </section>
         <!-- FIN SECCION DESTACADOS -->
         <!-- SECCION ACTIVOS -->
@@ -258,6 +229,7 @@
     </footer>
     <!-- CARGAR BOOTSTRAP JS -->
     <script defer src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/vistaEventos.js"></script>
 </body>
 
 </html>
