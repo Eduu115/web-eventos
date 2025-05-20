@@ -1,10 +1,9 @@
 let eventos = [];
 // fetch cargamos los datos
-fetch('/db/datos.json')
+fetch('http://localhost:9003/evento/todos')
   .then(res => res.json())
   .then(data => {
     eventos = data;
 });
-let eventosDestacados = eventos.filter(evento => evento.destacado == "S");
-console.log(eventosDestacados);
-//------------------------Trabajamos con el array olvidando el JSON
+console.log(eventos);
+
