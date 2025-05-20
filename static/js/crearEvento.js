@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
           tipos = data;
       });
 
-    btn_enviar.addEventListener('click', (event) => {
+    btn_enviar.addEventListener('submit', (event) => {
         event.preventDefault();
 
         let seleccionado = (document.getElementById("tipo").value === "CONCIERTO") ? 0 : 1;

@@ -35,7 +35,6 @@ button {
     padding: 5px 20px;
     background-color: #F64001;
     color: white;
-    box-shadow: 0px 0px 20px black;
 }
 
 
@@ -68,10 +67,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
     text-align: center;
-    margin-left: 140px;
-    margin-top: 60px;
 }
 
 
@@ -114,4 +110,26 @@ h2{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#contenedor-enviar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#enviar{
+    width: 100%;
+    background-color: #ffffff;
+    color: #F64001;
+    transition: transform 0.5s;
+    transition: background-color 0.1s ease-in;
+}
+#enviar:hover{
+    transform: scale(1.05);
+}
+#enviar:active{
+    background-color: #F64001;
+}
+textarea{
+    border-radius: 5px;
 }

@@ -41,12 +41,12 @@
             <form action="" id="form">
                 <div class="formulario">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Nombre del evento">
+                    <input type="text" id="nombre" placeholder="Nombre del evento" required>
                 </div>
     
                 <div class="formulario">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" id="descripcion" placeholder="Descripción">
+                    <textarea name="descripcion" placeholder="descripcion" id="descripcion" cols="30" rows="2" class="p-1"></textarea>
                 </div>
     
                 <div class="formulario">
@@ -76,7 +76,10 @@
     
                 <div class="formulario">
                     <label for="estado">Estado</label>
-                    <input type="text" id="estado" placeholder="Estado">
+                    <select name="estado" id="estado" required>
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="TERMINADO">TERMINADO</option>
+                    </select>
                 </div>
     
                 <div class="formulario">
@@ -85,12 +88,16 @@
                 </div>
     
                 <div class="formulario">
-                    <label for="tipo">Fecha de alta</label>
-                    <input type="text" id="tipo">
+                    <label for="tipo">Tipo Evento</label>
+                    
+                    <select name="tipo" id="tipo" required>
+                        <option value="CONCIERTO">CONCIERTO</option>
+                        <option value="FESTIVAL">FESTIVAL</option>
+                    </select>
                 </div>
     
-                <div class="formulario">
-                    <button id="enviar" name="enviar">ENVIAR</button>
+                <div class="formulario" id="contenedor-enviar">
+                    <input type="submit" id="enviar" name="enviar">
                 </div>
             </form>
 
