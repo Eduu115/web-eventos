@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -34,7 +34,8 @@
     <nav class="container-fluid d-flex p-0 pt-2">
         <img src="./static/media/img/SoloLogoSF500x250.png" alt="logo" height="50px" width="130px" />
         <h1 class="titulos text-white"><a href="index.html">EVENTBOOK</a></h1>
-
+        <h1 class="text-white"><a href="home.html">Home <i class="fa-solid fa-up-right-from-square"></i></a></h1>
+        <h1 class="text-white"><a href="dashboard.html">Admin dashboard<i class="fa-solid fa-up-right-from-square"></i></a></h1>
     </nav>
     <!-- INICIO MAIN -->
     <main>
@@ -49,7 +50,9 @@
                 <h3 class="subtitulo-seccion">
                     Encuentra los eventos que mas destacan <br> entre gente con mucho gusto como tú
                 </h3>
-                <button class="mt-4 ms-1 ver-mas btn">VER TODOS</button>
+                <a href="vistaTodos.html#contenedor-destacados">
+                    <button class="mt-4 ms-1 ver-mas btn">VER TODOS</button>
+                </a>
             </div>
             <div class="contenedor-card">
                 <!-- CARD 1 -->
@@ -115,7 +118,9 @@
                 <h3 class="subtitulo-seccion">
                     Encuentra eventos disponibles aún <br> para hacer una reserva
                 </h3>
-                <button class="mt-4 ms-1 ver-mas btn">VER TODOS</button>
+                <a href="vistaTodos.html#activos">
+                    <button class="mt-4 ms-1 ver-mas btn">VER TODOS</button>
+                </a>
             </div>
             <div class="contenedor-card">
                 <!-- CARD 1 -->
@@ -206,7 +211,9 @@
                 <h3 class="subtitulo-seccion" id="subtitulo-seccion-sold-out">
                     Encuentra los eventos que mas destacan <br> entre gente con mucho gusto como tú
                 </h3>
-                <button class="mt-4 ms-1 ver-mas btn" id="ver-mas-sold-out">VER TODOS</button>
+                <a href="vistaTodos.html#sold-out">                    
+                    <button class="mt-4 ms-1 ver-mas btn" id="ver-mas-sold-out">VER TODOS</button>
+                </a>
             </div>
             <!-- FILA 2 -->
             <div class="contenedor-card">
@@ -238,6 +245,12 @@
             </div>
         </section>
         <!-- FIN SECCION SOLD-OUT -->
+        <!-- Seccion perdido -->
+        <section id="perdido">
+            <h1 class="titulos">¿Sigues perdido?</h1>
+            <h3>Encuentra todos tus eventos <a href="vistaTodos.html">aquí</a></h3>
+        </section>
+        <!-- FIN SECCION PERDIDO -->
     </main>
     <!-- FIN MAIN -->
     <footer>

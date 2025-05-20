@@ -21,3 +21,20 @@ nav img{
 html{
   height: 100%;
 }
+
+nav h1{
+  transform: scale(0.8);
+}
+nav i{
+  transform: scale(0.6);
+  padding-top: 1%;
+  color: #F14001;
+}
+.nav-title{
+  transform: scale(1);
+}
+nav a{
+  all: unset;
+  color: white;
+  cursor: pointer;
+}
