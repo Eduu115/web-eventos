@@ -1,15 +1,23 @@
 nav {
-    background-color: #F64001;
+    align-items: center;
+    background: #f64001;
+    border-bottom: 2px solid #f64001;
 }
 
 
-nav img {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
+nav a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
-nav h1{
-    margin-top: 17px;
+
+
+nav h1 {
+    margin-top:19px;
+}
+
+nav img{
+    margin-bottom: 23px;
 }
 
 
