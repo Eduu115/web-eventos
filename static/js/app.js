@@ -54,7 +54,7 @@ function renderizarReservas() {
               <button class="me-4 button btn-view" data-id="${r.idEvento}">Ver detalles</button>
           </div>
           <div class="col-2 seccion-imagen">
-            <img src="${r.rutaImagen}" alt="imagen-evento">
+            <img class="imagen-dashboard" src="${r.rutaImagen}" alt="imagen-evento">
           </div>
         </div>
       </div>
