@@ -1,0 +1,117 @@
+nav {
+    background-color: #F64001;
+}
+
+
+nav h1{
+    margin-top: -4px;   
+}
+
+
+nav img {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+body {
+    background-color: rgb(51, 50, 50);
+    margin: 0;
+    padding: 0;
+}
+
+
+.card {
+    background-color: rgb(34, 33, 33);
+    color: white;
+    height: 100%;
+}
+
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    background-color: #F64001;
+    color: white;
+    box-shadow: 0px 0px 20px black;
+}
+
+
+
+.contenedor-botones {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.contenedor-botones a {
+    all: unset;
+    cursor: pointer;
+    color: white;
+    background-color: #F64001;
+}
+
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 90px;
+    font-size: 60px;
+
+}
+
+
+.contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    margin-left: 140px;
+    margin-top: 60px;
+}
+
+
+.formulario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    
+}
+
+
+.formulario label {
+    background-color: #F64001;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 150px;
+}
+
+
+.formulario input,
+.formulario select {
+    flex: 0 0 300px;
+    max-width: 100%;
+    padding: 5px 10px;  
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: #000; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
