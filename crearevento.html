@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./static/css/main.css">
     <!-- CSS PROPIO -->
     <link rel="stylesheet" href="./static/css/crearevento.css">
+    <script src="./static/js/crearEvento.js"></script>
 </head>
 <body>
     <nav class="container-fluid d-flex">
@@ -37,58 +38,77 @@
         <div class="contenedor-formulario">
              
 
+            <form action="" id="form">
                 <div class="formulario">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Nombre del evento">
+                    <input type="text" id="nombre" placeholder="Nombre del evento" required>
                 </div>
-
+    
                 <div class="formulario">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" id="descripcion" placeholder="Descripción">
+                    <textarea name="descripcion" placeholder="descripcion" id="descripcion" cols="30" rows="2" class="p-1"></textarea>
                 </div>
-
+    
                 <div class="formulario">
                     <label for="fechaInicio">Fecha de inicio</label>
                     <input type="date" id="fechaInicio">
                 </div>
-
+    
                 <div class="formulario">
                     <label for="duracion">Duración</label>
                     <input type="text" id="duracion" placeholder="Horas">
                 </div>
-
+    
                 <div class="formulario">
                     <label for="direccion">Dirección</label>
                     <input type="text" id="direccion" placeholder="Dirección">
                 </div>
-
+    
                 <div class="formulario">
                     <label for="aforo">Aforo máximo</label>
                     <input type="text" id="aforo" placeholder="Cantidad de personas">
-                 </div>
-
+                    </div>
+    
                 <div class="formulario">
                     <label for="precio">Precio</label>
                     <input type="text" id="precio" placeholder="Precio en €">
                 </div>
-
+    
                 <div class="formulario">
                     <label for="estado">Estado</label>
-                    <input type="text" id="estado" placeholder="Estado">
+                    <select name="estado" id="estado" required>
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="TERMINADO">TERMINADO</option>
+                    </select>
                 </div>
-
+    
                 <div class="formulario">
                     <label for="fechaAlta">Fecha de alta</label>
                     <input type="date" id="fechaAlta">
                 </div>
-</div>
+    
+                <div class="formulario">
+                    <label for="tipo">Tipo Evento</label>
+                    
+                    <select name="tipo" id="tipo" required>
+                        <option value="CONCIERTO">CONCIERTO</option>
+                        <option value="FESTIVAL">FESTIVAL</option>
+                    </select>
+                </div>
+    
+                <div class="formulario" id="contenedor-enviar">
+                    <input type="submit" id="enviar" name="enviar">
+                </div>
+            </form>
+
+        </div>
 
     </main>
     <!-- FIN MAIN -->
     <footer>
 
     </footer>
-    <!-- Cargamos script db -->
-    <script src="./db/app.js"></script>
+ 
+
 </body>
 </html>
