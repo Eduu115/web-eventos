@@ -1,7 +1,7 @@
 nav {
   align-items: center;
-  background: #1e272b;
-  border-bottom: 2px solid #f64001;
+  background: #f64001;
+  border-bottom: 2px solid white;
   padding-bottom: 15px;
 }
 
@@ -9,6 +9,9 @@ nav a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+nav i{
+  color: white;
 }
 
 nav h1 {
