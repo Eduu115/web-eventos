@@ -51,13 +51,35 @@ function renderizarReservas() {
           <div class="contenedor-botones col-5 d-flex justify-content-center">
               <button class="me-4 button btn-edit" data-id="${r.idEvento}">Editar</button>
               <button class="me-4 button btn-delete" data-id="${r.idEvento}">Eliminar</button>
-              <button class="me-4 button btn-view" data-id="${r.idEvento}">Ver detalles</button>
+              <button class="me-4 button btn-view" data-bs-toggle="collapse" data-bs-target="#collapse-${r.idEvento}" aria-expanded="false" aria-controls="collapse-${r.idEvento}">Ver detalles</button>
           </div>
           <div class="col-2 seccion-imagen">
             <img class="imagen-dashboard" src="${r.rutaImagen}" alt="imagen-evento">
           </div>
         </div>
       </div>
+
+      <div class="collapse" id="collapse-${r.idEvento}">
+      <div class="card card-body">
+        <div class="evento-detalles d-flex gap-4 flex-wrap">
+          <div class="detalle-columna flex-fill">
+            <p><strong>Descripción:</strong>
+              <span>${r.descripcion || 'Sin descripción disponible'}</span>
+            </p>
+            <p><strong>Fecha de Inicio:</strong> <span>${r.fechaInicio || '-'}</span></p>
+            <p><strong>Fecha de Alta:</strong> <span>${r.fechaAlta || '-'}</span></p>
+            <p><strong>Duración:</strong> <span>${r.duracion || '-'}</span></p>
+            <p><strong>Dirección:</strong> <span>${r.direccion || '-'}</span></p>
+          </div>
+          <div class="detalle-columna flex-fill">
+            <p><strong>Aforo Máximo:</strong> <span>${r.aforoMaximo || '-'}</span></p>
+            <p><strong>Precio:</strong> <span>${r.precio || '-'}</span></p>
+            <p><strong>Estado:</strong> <span>${r.estado || '-'}</span></p>
+            <p><strong>Destacado:</strong> <span>${r.destacado ? 'Sí' : 'No'}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
     `;
     
     const deleteButton = col.querySelector('.btn-delete');
