@@ -5,10 +5,16 @@ nav {
   padding-bottom: 15px;
 }
 
+nav img {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+
 nav a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+
 }
 
 nav h1 {
@@ -22,7 +28,6 @@ body {
 .card {
   background-color: rgb(34, 33, 33);
   color: white;
-  height: 100%;
 }
 
 button {
@@ -39,6 +44,7 @@ button {
 main {
   height: 100%;
 }
+
 .encabezado {
   height: 15%;
 }
@@ -46,13 +52,16 @@ main {
 .row {
   padding: 40px;
 }
+
 #seccion-reservas {
   padding-top: 0;
 }
+
 .contenedor-botones {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .contenedor-botones a {
   all: unset;
   cursor: pointer;
@@ -61,14 +70,19 @@ main {
 }
 
 .dashboard-imagen {
-max-height: 200px;
+  max-height: 200px;
 }
 
 div img, svg {
   vertical-align: middle;
-  max-width: 200px;
+  width: auto;
+  max-width: 100%;
   border: 0.2px solid #ffffff48;
   border-radius: 7px;
   box-shadow: 0px 0px 20px black;
 }
 
+.seccion-imagen {
+  display: flex;
+  align-items: center;
+}
