@@ -161,9 +161,9 @@ input::-moz-focus-inner {
 }
 
 
-.inicioSesion{
+.inicioSesion {
   text-align: center;
   margin-bottom: 100px;
   color: white;
-  font-family: 'Inter UI', sans-serif;
+  font-size: 4rem;
 }

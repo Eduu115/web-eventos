@@ -8,8 +8,8 @@ nav {
 nav img {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 20px;
-
+  margin-bottom: 2px;
+}
 nav a {
   text-decoration: none;
   color: inherit;
@@ -25,11 +25,11 @@ nav h1 {
 }
 
 body {
-  background-color: rgb(51, 50, 50);
+  background-color: #1E272B;
 }
 
 .card {
-  background-color: rgb(34, 33, 33);
+  background-color: #14191d;
   color: white;
 }
 
@@ -63,6 +63,7 @@ main {
 .contenedor-botones {
   padding-top: 20px;
   padding-bottom: 20px;
+  max-height: 150px;
 }
 
 .contenedor-botones a {
@@ -88,4 +89,8 @@ div img, svg {
 .seccion-imagen {
   display: flex;
   align-items: center;
+}
+
+.titulo-dashboard {
+  font-size: 4rem;
 }
