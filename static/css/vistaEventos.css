@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 nav {
   background-color: #1e272b;
@@ -65,12 +66,12 @@ section {
 }
 .card img {
   max-height: 70%;
-  width: auto;
+  max-width: 100%;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
 .card-body {
-  max-height: 30%;
+  max-height: 100%;
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
@@ -101,7 +102,7 @@ section {
 /* SOLD OUT (muy concreto porque cambia casi todo de colores y demas) */
 #sold-out {
   background-color: #1e272b;
-  grid-template-columns: 1fr 1fr 1.2fr;
+  grid-template-columns: 2fr 1fr;
   color: #b2afac;
 }
 #titulo-sold-out {
@@ -144,4 +145,20 @@ section {
 #perdido h1{
   font-size: 80px;
   color: white;
+}
+.card-img-top {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+
+}
+.row{
+  height: 100%;
+}
+.sub-columna1-eventos, .sub-columna2-eventos{
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: 1f;
+  grid-template-rows: 50% 50%;
+  align-content: center;
 }
