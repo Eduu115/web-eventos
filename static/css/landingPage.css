@@ -2,10 +2,11 @@
 
 .imagenDeFondo1 {
   position: relative; /* Establece la posición relativa para permitir posicionamiento de elementos hijos */
-  background: url("../media/img/upscalemedia-transformed.jpeg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
+  background: url("../media/img/concert.jpg") no-repeat center center; /* Define la imagen de fondo, sin repetición, centrada horizontal y verticalmente */
   background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
   height: 100vh; /* Establece la altura del contenedor al 100% del alto de la ventana */
   width: 100%; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
+  padding: 3%;
 }
 
 .principal {
@@ -100,8 +101,25 @@
   height: 333px;
 }
 
+#boton-empezar {
+  border-radius: 5px;
+  background-color: #f64001;
+  font-size: 28px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.tituloLanding {
+  font-size: 120px;
 
+}
+
+.descripcionLanding {
+  font-size: 30px;
+}
+
+.tituloLogo {
+  font-size: 70px;
+}
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
 
 .imagenDeFondo2 {

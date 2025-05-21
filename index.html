@@ -28,29 +28,35 @@
     </head>
     <body>
         <!-- ============== Principal ============== -->
+
         <header class="imagenDeFondo1">
-            <div class="container-fluid principal">
-                <div class="row d-flex justify-content-between align-items-center">
+            <div class="d-grid h-100">
+                <div class="row-6 d-flex">
                     <div class="col-6">
-                        <a href="dashboard.html"><img src="./static/media/img/LogoBannerSF500x200.png" alt="logo" height="150px" width="auto"></a>
+                        <div class="d-flex align-items-center">
+                            <a href="dashboard.html"><img src="./static/media/img/SoloLogoSF500x250.png" alt="logo" height="80px" width="auto"></a>
+                            <h1 class="titulos m-0 ms-2 text-white mt-1 tituloLogo">EVENTBOOK</h1>
+                        </div>                       
                     </div>
-                    <div class="col-6 d-flex justify-content-end pe-5">
+                    <div class="col-6 d-flex justify-content-end" id="login-btn">
                         <a href="login.html" class="btn rounded-pill fw-bold px-5 py-2 login-btn titulos">ENTRAR <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                     </div>
                 </div>
-
-                <div class="row d-flex justify-content-between align-items-center principal2">
+                <div class="row-6 d-flex justify-content-start align-items-end">
                     <div class="col-6">
                         <div>
-                            <h1 class="">EVENTOS SIN <br>RODEOS</h1>
-                            <p class="">Elige, reserva y empieza. Nosotros nos encargamos del resto.</p>
+                            <h1 class="text-white titulos tituloLanding">EVENTOS<br> SIN RODEOS</h1>
+                            <p class="text-white descripcionLanding m-0">Elige, reserva y empieza. Nosotros nos encargamos del resto.</p>
                         </div>
                     </div>
-                    <div class="col-6 d-flex justify-content-end">
-                        <a href="#quienes-somos" class="btn fw-bold rounded-pill px-4 cta-btn titulos boton-inicio"><i class="fa-solid fa-arrow-down"></i> ¡EMPIEZA YA! <i class="fa-solid fa-arrow-down"></i></a>
+                    <div class="col-6 d-flex justify-content-end align-items-end ">
+                        <a href="#quienes-somos" >
+                            <div id="boton-empezar" class="btn text-white rounded-pill titulos px-5 py-3">  
+                                <span><i class="fa-solid fa-arrow-down"></i> EMPIEZA YA <i class="fa-solid fa-arrow-down"></i></span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </header>
 
