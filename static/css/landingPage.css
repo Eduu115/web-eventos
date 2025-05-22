@@ -287,7 +287,7 @@ font-size: 34px;
 
 /* CONTACTO */
 
-footer {
+#footer-section {
   background-color: #f64001;
   min-height: 110vh;
 }
@@ -329,3 +329,104 @@ footer {
 .about-us {
   width: 70%;
 }
+
+.container-mensaje {
+  background-color: #000;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.container-mensaje p {
+  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+  margin-right: 400px;
+}
+
+.container-mensaje a{
+  margin-left: 400px;
+}
+
+
+footer{
+  background-color: rgb(70, 70, 70);
+}
+
+#footer_text p {
+  color: white;
+  margin-left: 60px;
+}
+
+#footer_logo{
+  display: flex;
+  justify-content: flex-start;  
+  padding-right: -30px;
+}
+
+#footer_logo img {
+  transform: scale(0.5);
+  transform-origin: center;
+  width: 150px;
+  height: auto;
+}
+
+.redesSociales_2 p {
+  margin: 0;
+  color: white; /* Para que los iconos hereden el color blanco */
+}
+
+.redesSociales_2 a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre icono y texto */
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.redesSociales_2 > div {
+  display: flex; /* Esto pone los iconos en línea */
+  gap: 15px; /* Espacio entre cada icono */
+  margin-left: -10;
+  padding-left: 0;
+}
+
+.redesSociales_2 a:hover {
+  color: #f64001;
+}
+
+.redesSociales_2 i {
+  font-size: 22px;
+}
+
+#footer_text_and_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Esto pone el texto a la izquierda y los logos a la derecha */
+  padding: 0 20px; /* Un poco de espacio a los lados */
+  color: white; /* Texto blanco */
+}
+
+
+#footer_text_and_icons p {
+  margin: 0;
+  flex: 1; /* Para que el párrafo ocupe el máximo espacio posible a la izquierda */
+  max-width: 70%; /* Ajusta para que no ocupe todo */
+}
+
+
+/*<div id="footer_text" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
+                    <p>© 2025 EventBook Corporation. Todos los derechos reservados. Todas las marcas registradas pertenecen a sus respectivos dueños en ESPAÑA: y otros países.</p>
+                </div>
+
+                <div class="col-2 redesSociales_2">
+                    <div>
+                      <p><a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></p>
+                      <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></p>
+                      <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></p>
+                    </div>
+                </div>*/
