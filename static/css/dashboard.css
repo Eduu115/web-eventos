@@ -31,6 +31,7 @@ body {
 .card {
   background-color: #14191d;
   color: white;
+  margin-top: 5px;
 }
 
 button {
