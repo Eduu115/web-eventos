@@ -53,12 +53,33 @@
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3sease, color 0.3 sease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .login-btn:hover {
   background: #f64001;
   color: white;
+}
+
+.volverIndex-btn {
+  border-color: #000000;
+  position: absolute;
+  background: white;
+  color: #f64001;
+  font-size: 30px; 
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 225px;
+  padding: 20px 40px; 
+  margin-top: -110px;
+}
+
+.volverIndex-btn:hover {
+  background-color: #000000;
+  color: #f64001;
+  border-color: #000000;
 }
 
 .cta-btn {
@@ -184,7 +205,7 @@ span{
   background-color: #f9f1e8;
   border: 2px solid black;
   border-radius: 15px;
-  transition: background-color 0.3sease, color 0.3 sease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 700;
   text-decoration: none;
   color: black;
