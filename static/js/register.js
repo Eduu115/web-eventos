@@ -17,16 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const apellidosJuntos = `${apellido1}` + " " + `${apellido2}`;
 
-        const fecha = new Date().toLocaleDateString();
-
         let user = {
             nombre: document.getElementById("nombre").value,
             email: documen.getElementById("email").value,
             apellidos: apellidosJuntos,
             password: document.getElementById("password").value,
-            fechaRegistro: fecha,
-            perfil: perfil,
-            enabled: "1"
         };
 
         fetch("http://localhost:9003/usuario/alta", {
@@ -41,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(data => {
-            console.log("Evento creado:", data);
+            console.log("Usuario creado:", data);
         })
         .catch(error => {
-            console.error("Error al crear el evento:", error);
+            console.error("Error al crear el usuario:", error);
         });
     });
 });
