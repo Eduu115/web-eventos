@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     var current = null;
 
-    document.querySelector('#name').addEventListener('focus', function (e) {
+    document.querySelector('#nombre').addEventListener('focus', function (e) {
         if (current) current.pause();
         current = anime({
             targets: 'path',

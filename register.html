@@ -25,7 +25,7 @@
 
     <!-- CSS propio -->
     <link rel="stylesheet" href="static/css/loginRegister.css">
-
+    <script src="./static/js/register.js"></script>
 </head>
 <body>
     <nav class="container-fluid d-flex">
@@ -36,12 +36,12 @@
     </nav>
     <div class="page pt-4" id="page">
       <h1 class="inicioSesion titulos">
-        REGISTER
+        REGISTRO
       </h1>
       <div class="container">
         <div class="left">
-          <div class="login">Register</div>
-          <div class="eula mb-0">By registering in you agree to the ridiculously long terms that you didn't bother to read</div>
+          <div class="login">Registro</div>
+          <div class="eula mb-0">Al registrarte, aceptas los ridículamente largos términos que no te molestaste en leer.</div>
         </div>
         <div class="right">
             <svg viewBox="0 0 320 300">
@@ -55,7 +55,7 @@
                 <path
                 d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
             </svg>
-            <form class="form">
+            <form class="form" id="form">
                 <div class="row">
                     <div class="col-6">
                         <label for="apellido1">Apellido 1</label>
@@ -66,20 +66,20 @@
                         <input name="apellido2" id="apellido2" type="text" required minlength="2">
                     </div>
                 </div>
-                <label for="name">Nombre</label>
-                <input name="name" id="name" type="text" required minlength="2">
+                <label for="nombre">Nombre</label>
+                <input name="nombre" id="nombre" type="text" required minlength="2">
                 <label for="email">Email</label>
                 <input type="email" id="email" required minlength="5">
-                <label for="password">Password</label>
+                <label for="password">Contraseña</label>
                 <input type="password" id="password" required minlength="8" placeholder="+7 caracteres">
-                <input type="submit" id="submit-btn" value="Submit">
+                <input class="pt-2" type="submit" id="submit-btn" value="Submit">
             </form>
         </div>
       </div>
     </div>
   
     <footer>
-  
+    
     </footer>
     <!-- BS -->
     <script defer src="./static/js/bootstrap.min.js"></script>
