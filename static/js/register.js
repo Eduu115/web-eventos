@@ -1,27 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const btn_enviar = document.getElementById("submit-btn");
-    let perfilUser = [];
+    const form_enviar = document.getElementById("form");
 
-    // Siempre que se registre un usuario va a ser como perfil, no tiene sentido que sea admin
-    fetch("http://localhost:9003/perfil/uno/2")
-      .then(res => res.json())
-      .then(data => {
-          perfilUser = data;
-          
-      });
-    btn_enviar.addEventListener('submit', (event) => {
+    form_enviar.addEventListener('submit', (event) => {
         event.preventDefault();
+        console.log("hola");
+        const apellido1 = document.getElementById("apellido1").value;
+        const apellido2 = document.getElementById("apellido2").value;
 
-        const apellido1 = document.getElementById("apellido1");
-        const apellido2 = document.getElementById("apellido2");
-
-        const apellidosJuntos = `${apellido1}` + " " + `${apellido2}`;
+        let apellidosJuntos = `${apellido1} ${apellido2}`;
 
         let user = {
-            nombre: document.getElementById("nombre").value,
-            email: documen.getElementById("email").value,
-            apellidos: apellidosJuntos,
+            email: document.getElementById("email").value,
             password: document.getElementById("password").value,
+            nombre: document.getElementById("nombre").value,
+            apellidos: apellidosJuntos
         };
 
         fetch("http://localhost:9003/usuario/alta", {
