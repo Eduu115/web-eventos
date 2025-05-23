@@ -1,69 +1,95 @@
-let reservas = [];
-// fetch cargamos los datos
-fetch('http://localhost:9003/reservas/todos')
+let reservasPorEvento = [];
+const params = new URLSearchParams(window.location.search);
+const idEvento = params.get('idEvento');
+
+fetch(`http://localhost:9003/reserva/evento/${idEvento}`)
   .then(res => res.json())
   .then(data => {
-    reservas = data;
-    mostrarReserva();
+    reservasPorEvento = data;
+    renderizarReservas();
 });
 
+
 // 3. Renderizado en DOM
-function mostrarReserva() {
+function renderizarReservas() {
   const row = document
     .getElementById('seccion-reservas')
     .querySelector('.row.g-2');
   row.innerHTML = ''; // limpio
 
-  reservas.forEach(r => {
+
+ 
+    const col = document.createElement('div');
+    col.className = 'col-12 evento-reservado';
+    col.innerHTML = ` <div class="card p-3 mb-4">
+    <div class="row g-3">
+      <div class="col-md-1">
+        <h5 class="card-title">ID</h5>
+      </div>
+      <div class="col-md-3">
+        <h5 class="card-title">NOMBRE</h5>
+      </div>
+      <div class="col-md-3">
+        <h5 class="card-title">EMAIL</h5>
+      </div>
+      <div class="col-md-2">
+        <h5 class="card-title">PERFIL </h5>
+      </div>
+      <div class="col-md-1">
+        <h5 class="card-title">CANTIDAD </h5>
+      </div>
+      <div class="col-md-2 border-0">
+        <h5 class="card-title">INGRESOS</h5>
+      </div>
+    </div>
+  </div>
+    `;
+    row.appendChild(col);
+
+
+  if (reservasPorEvento.length === 0) {
+    col.className = 'col-12 evento-reservado';
+    col.innerHTML= '';
+    col.innerHTML = `
+    <div class="card p-3">
+      <h5>No hay reservas para este evento</h5>
+    </div>
+    `;
+    row.appendChild(col);
+    return
+  }
+
+  reservasPorEvento.forEach(r => {
     const col = document.createElement('div');
     col.className = 'col-12 evento-reservado';
     col.innerHTML = `
-      <div class="card d-grid">
-        <div class="row">
-          <div class="col-1">
-            <h5 class="card-title">${r.nombre}</h5>
-          </div>
-          <div class="contenedor-info col-4">
-            <p>id : ${r.idEvento}</p>
-            <p>Estado : ${r.estado}</p>
-            <p>APM : ${r.aforoMaximo}</p>
-          </div>
-          <div class="contenedor-botones col-5 d-flex justify-content-center">
-              <button class="me-4 button btn-edit" data-id="${r.idEvento}">Editar</button>
-              <button class="me-4 button btn-delete" data-id="${r.idEvento}">Eliminar</button>
-              <button class="me-4 button btn-view" data-bs-toggle="collapse" data-bs-target="#collapse-${r.idEvento}" aria-expanded="false" aria-controls="collapse-${r.idEvento}">Ver detalles</button>
-          </div>
-          <div class="col-2 seccion-imagen">
-            <img class="imagen-dashboard" src="${r.rutaImagen}" alt="imagen-evento">
-          </div>
+    
+    <div class="card p-3 mb-4">
+      <div class="row">
+        <div class="col-md-1">
+          <h5 class="card-title">${r.idReserva}</h5>
         </div>
-      </div>
-
-      <div class="collapse" id="collapse-${r.idEvento}">
-      <div class="card card-body">
-        <div class="evento-detalles d-flex gap-4 flex-wrap">
-          <div class="detalle-columna flex-fill">
-            <p><strong>Descripción:</strong>
-              <span>${r.descripcion || 'Sin descripción disponible'}</span>
-            </p>
-            <p><strong>Fecha de Inicio:</strong> <span>${r.fechaInicio || '-'}</span></p>
-            <p><strong>Fecha de Alta:</strong> <span>${r.fechaAlta || '-'}</span></p>
-            <p><strong>Duración:</strong> <span>${r.duracion || '-'}</span></p>
-            <p><strong>Dirección:</strong> <span>${r.direccion || '-'}</span></p>
-          </div>
-          <div class="detalle-columna flex-fill">
-            <p><strong>Aforo Máximo:</strong> <span>${r.aforoMaximo || '-'}</span></p>
-            <p><strong>Precio:</strong> <span>${r.precio || '-'}</span></p>
-            <p><strong>Estado:</strong> <span>${r.estado || '-'}</span></p>
-            <p><strong>Destacado:</strong> <span>${r.destacado ? 'Sí' : 'No'}</span></p>
-          </div>
+        <div class="col-md-3">
+          <p><strong>Reserva de:</strong> ${r.usuario.nombre} ${r.usuario.apellidos}</p>
+        </div>
+        <div class="col-md-3 ">
+          <p><strong>Email:</strong> ${r.usuario.email}</p>
+        </div>
+        <div class="col-md-2">
+          <p><strong>Perfil:</strong> ${r.usuario.perfil.nombre}</p>
+        </div>
+        <div class="col-md-1">
+          <p><strong>Cantidad:</strong> ${r.cantidad}</p>
+        </div>
+        <div class="col-md-2 border-0">
+          <p><strong>Ingresos:</strong> ${r.cantidad * r.evento.precio} </p>
         </div>
       </div>
     </div>
+
+
     `;
+    row.appendChild(col);
+
   });
 }
-
-
-// inicializar render
-mostrarReserva();
