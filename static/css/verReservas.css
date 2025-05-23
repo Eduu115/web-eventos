@@ -1,0 +1,8 @@
+.card .row .col-md-1,
+.card .row .col-md-2,
+.card .row .col-md-3 {
+    border-right: 2px solid white;
+    text-align: center;
+    
+}
+

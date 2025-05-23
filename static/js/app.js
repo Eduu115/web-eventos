@@ -5,24 +5,26 @@ fetch('http://localhost:9003/evento/todos')
   .then(data => {
     reservas = data;
     renderizarReservas();
-});
+  });
 
 function eliminarReserva(idEvento) {
   fetch(`http://localhost:9003/evento/eliminar/${idEvento}`, {
     method: 'DELETE'
   })
-  .then(res => {
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.json(); // o simplemente return;
-  })
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json(); // o simplemente return;
+    })
     .then(() => {
       // filtremos por el id correcto
       reservas = reservas.filter(ev => ev.idEvento !== idEvento);
       renderizarReservas();
     })
     .catch(err => console.error('Error al eliminar:', err));
-    
+
 }
+
+
 
 //------------------------Trabajamos con el array olvidando el JSON
 // CRUD
@@ -51,6 +53,7 @@ function renderizarReservas() {
           <div class="contenedor-botones col-5 d-flex justify-content-center">
               <button class="me-4 button btn-edit" data-id="${r.idEvento}">Editar</button>
               <button class="me-4 button btn-delete" data-id="${r.idEvento}">Eliminar</button>
+              <button class="me-4 button btn-reservas" data-id="${r.idEvento}">Ver reservas</button>
               <button class="me-4 button btn-view" data-bs-toggle="collapse" data-bs-target="#collapse-${r.idEvento}" aria-expanded="false" aria-controls="collapse-${r.idEvento}">Ver detalles</button>
           </div>
           <div class="col-2 seccion-imagen">
@@ -81,12 +84,18 @@ function renderizarReservas() {
       </div>
     </div>
     `;
-    
+
     const deleteButton = col.querySelector('.btn-delete');
     deleteButton.addEventListener('click', () => eliminarReserva(r.idEvento));
-    
+
+    let verReservasButton = col.querySelector('.btn-reservas');
+    verReservasButton.addEventListener('click', () => {
+      let idEvento = r.idEvento;
+      window.location.href = `verReservas.html?idEvento=${idEvento}`;
+    });
+
     row.appendChild(col);
-    
+
   });
 }
 
