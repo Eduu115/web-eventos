@@ -1,219 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="./static/media/img/iconoRedondo.png">
-        <title>Inicio | EventBook</title>
-        <!-- dependencias -->
-        <!-- FONTAWESOME -->
-        <script src="https://kit.fontawesome.com/73cd6cc98d.js" crossorigin="anonymous"></script>
-        <!-- GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <!-- fuente 1 -->
-        <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet" />
-        <!-- fuente 2 -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet" />
-        <!-- BOOTSTRAP LOCAL -->
-        <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./static/media/img/iconoRedondo.png">
+    <title>Inicio | EventBook</title>
+    <!-- dependencias -->
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/73cd6cc98d.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- fuente 1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- fuente 2 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- BOOTSTRAP LOCAL -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
 
-        <!-- CSS INTERNO -->
-        <link rel="stylesheet" href="./static/css/main.css" />
-        <link rel="stylesheet" href="./static/css/landingPage.css" />
-    </head>
-    <body>
-        <!-- ============== Principal ============== -->
+    <!-- CSS INTERNO -->
+    <link rel="stylesheet" href="./static/css/main.css" />
+    <link rel="stylesheet" href="./static/css/landingPage.css" />
+</head>
 
-        <header class="imagenDeFondo1">
-            <div class="d-grid h-100">
-                <div class="row-6 d-flex">
-                    <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <a href="dashboard.html"><img src="./static/media/img/SoloLogoSF500x250.png" alt="logo" height="80px" width="auto"></a>
-                            <h1 class="titulos m-0 ms-2 text-white mt-1 tituloLogo">EVENTBOOK</h1>
-                        </div>                       
-                    </div>
-                    <div class="col-6 d-flex justify-content-end" id="login-btn">
-                        <a href="login.html" class="btn rounded-pill fw-bold px-5 py-2 login-btn titulos">ENTRAR <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+<body>
+    <!-- ============== Principal ============== -->
+
+    <header class="imagenDeFondo1" id="inicio">
+        <div class="d-grid h-100">
+            <div class="row-6 d-flex">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        <a><img src="./static/media/img/SoloLogoSF500x250.png" alt="logo" height="80px"
+                                width="auto"></a>
+                        <h1 class="titulos m-0 ms-2 text-white mt-1 tituloLogo">EVENTBOOK</h1>
                     </div>
                 </div>
-                <div class="row-6 d-flex justify-content-start align-items-end">
-                    <div class="col-6">
-                        <div>
-                            <h1 class="text-white titulos tituloLanding">EVENTOS<br> SIN RODEOS</h1>
-                            <p class="text-white descripcionLanding m-0">Elige, reserva y empieza. Nosotros nos encargamos del resto.</p>
+                <div class="col-6 d-flex justify-content-end" id="login-btn">
+                    <a href="login.html" class="btn rounded-pill fw-bold px-5 py-2 login-btn titulos">ENTRAR <i
+                            class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                </div>
+            </div>
+            <div class="row-6 d-flex justify-content-start align-items-end">
+                <div class="col-6">
+                    <div>
+                        <h1 class="text-white titulos tituloLanding">EVENTOS<br> SIN RODEOS</h1>
+                        <p class="text-white descripcionLanding m-0">Elige, reserva y empieza. Nosotros nos encargamos
+                            del resto.</p>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-end ">
+                    <a href="#quienes-somos">
+                        <div id="boton-empezar" class="btn text-white rounded-pill titulos px-5 py-3">
+                            <span><i class="fa-solid fa-arrow-down"></i> EMPIEZA YA <i
+                                    class="fa-solid fa-arrow-down"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============== QUIÉNES SOMOS ============== -->
+    <section class="imagenDeFondo2">
+        <div class="container sobreNosotros" id="quienes-somos">
+            <div class="row quienesSomos">
+                <div class="col-12">
+                    <h2>QUIENES SOMOS</h2>
+                </div>
+            </div>
+
+            <div class="row mt-1">
+                <div class="col-4">
+                    <div class="card mx-3">
+                        <img src="./static/media/img/vision.png" class="card-img-top vision" alt="Moto" height="auto"
+                            width="auto">
+                        <div class="card-body">
+                            <h5 class="card-title titulos">VISIÓN</h5>
+                            <p class="card-text">
+                                Queremos que organizar un evento sea rápido, fácil y sin
+                                complicaciones. Así de simple.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end ">
-                        <a href="#quienes-somos" >
-                            <div id="boton-empezar" class="btn text-white rounded-pill titulos px-5 py-3">  
-                                <span><i class="fa-solid fa-arrow-down"></i> EMPIEZA YA <i class="fa-solid fa-arrow-down"></i></span>
-                            </div>
+                </div>
+
+                <div class="col-4 ">
+                    <div class="card mx-3">
+                        <img src="./static/media/img/values.png" class="card-img-top valores" alt="Moto" height="auto"
+                            width="auto">
+                        <div class="card-body">
+                            <h5 class="card-title titulos">VALORES</h5>
+                            <p class="card-text">Trabajamos con claridad, compromiso y buen trato. Sin rodeos, sin
+                                líos.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card mx-3">
+                        <img src="./static/media/img/maleantes.png" class="card-img-top equipo" alt="Moto" height="auto"
+                            width="auto">
+                        <div class="card-body">
+                            <h5 class="card-title titulos">EQUIPO</h5>
+                            <p class="card-text">Somos gente que sabe lo que hace y le pone ganas. Cercanos, serios
+                                cuando toca, y eficaces siempre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row boton-flecha-cont pt-3">
+                <div class="col-12">
+                    <a href="#video-stats">
+                        <span class="boton-flecha-elemento titulos ">CONTINUA <i
+                                class="fa-solid fa-arrow-down"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== INNOVACIÓN ============== -->
+    <section>
+        <div class="container-fluid">
+            <div class="row innovation">
+                <div class="col-6 innovation-left">
+                    <video src="./static/media/videos/canserbero.mp4" autoplay="true" loop="true" muted="true"></video>
+                    <!-- ID para hacer link interno -->
+                    <div id="video-stats" class="grid-cards">
+                        <div class="innovation-card">
+                            <h2>+10.000</h2>
+                            <p class="">eventos organizados sin complicaciones.</p>
+                        </div>
+                        <div class="innovation-card">
+                            <h2>95%</h2>
+                            <p class="">de usuarios repiten porque salen encantados.</p>
+                        </div>
+
+                        <div class="innovation-card">
+                            <h2>2 minutos</h2>
+                            <p class="">y tienes tu evento reservado. Así de fácil.</p>
+                        </div>
+
+                        <div class="innovation-card">
+                            <h2>+500</h2>
+                            <p class="">espacios y proveedores que ya van con nosotros.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 innovation-right">
+                    <h3 class="titulos">INNOVADORES EN RESERVA DE EVENTOS</h3>
+                    <div class="innovation-description">
+                        <p class="">
+                            Nos cargamos las reservas aburridas. Hacemos que organizar eventos sea fácil, rápido y
+                            sin complicaciones. Nada de rollos, solo lo que necesitas, cuando lo necesitas.
+                        </p>
+                        <a href="#footer">
+                            <span class="boton-flecha-elemento titulos ">CONTACTO <i
+                                    class="fa-solid fa-arrow-down"></i></span>
                         </a>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
 
-        <!-- ============== QUIÉNES SOMOS ============== -->
-        <section  class="imagenDeFondo2" >
-            <div class="container sobreNosotros" id="quienes-somos">
-                <div class="row quienesSomos" >
-                    <div class="col-12">
-                        <h2 >QUIENES SOMOS</h2>
+
+
+    </section>
+
+    <footer>
+        <div id="footer" class="container">
+            <div class="row informacionContacto">
+                <div class="col-2 redesSociales">
+                    <div>
+                        <p><a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
+                                   eventbook_live</a></p>
+                        <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i>
+                                   eventbook_vibes</a>
+                        </p>
+                        <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>
+                                   eventbook_official</a></p>
                     </div>
                 </div>
-
-                <div class="row mt-1">
-                    <div class="col-4">
-                        <div class="card mx-3">
-                            <img src="./static/media/img/vision.png" class="card-img-top vision" alt="Moto" height="auto"
-                                width="auto">
-                            <div class="card-body">
-                                <h5 class="card-title titulos">VISIÓN</h5>
-                                <p class="card-text">
-                                    Queremos que organizar un evento sea rápido, fácil y sin
-                                    complicaciones. Así de simple.
-                                </p>
-                            </div>
-                        </div>
+                <div class="col-3 responsables">
+                    <div>
+                        <h4 class="titulos">Responsables</h4>
+                        <p>Presidente: Eduardo Serrano</p>
+                        <p>Vicepresidente: Anthony Gómez</p>
+                        <p>Conserje: David Castro</p>
+                        <br>
                     </div>
-
-                    <div class="col-4 ">
-                        <div class="card mx-3">
-                            <img src="./static/media/img/values.png" class="card-img-top valores" alt="Moto" height="auto"
-                                width="auto">
-                            <div class="card-body">
-                                <h5 class="card-title titulos">VALORES</h5>
-                                <p class="card-text">Trabajamos con claridad, compromiso y buen trato. Sin rodeos, sin
-                                    líos.
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="card mx-3">
-                            <img src="./static/media/img/maleantes.png" class="card-img-top equipo" alt="Moto" height="auto"
-                                width="auto">
-                            <div class="card-body">
-                                <h5 class="card-title titulos">EQUIPO</h5>
-                                <p class="card-text">Somos gente que sabe lo que hace y le pone ganas. Cercanos, serios
-                                    cuando toca, y eficaces siempre</p>
-                            </div>
-                        </div>
+                    <div>
+                        <h4 class="titulos">Contacto</h4>
+                        <p>Correo: contacto@web-eventos.com</p>
+                        <p>Teléfono: +34 123 456 789</p>
+                        <p>Dirección: Calle Falsa 123, Ciudad, País</p>
                     </div>
                 </div>
-                <div class="row boton-flecha-cont pt-3">
-                    <div class="col-12">
-                        <a href="#video-stats">
-                            <span class="boton-flecha-elemento titulos ">CONTINUA <i class="fa-solid fa-arrow-down"></i></span>
-                        </a>
-                    </div>    
+                <div class="col-7 contacto">
+                    <img src="./static/media/img/aboutus.png" alt="" class="about-us">
+
+                </div>
+                <div class="col-6 d-flex justify-content-end" id="volverIndex-btn">
+                    <a href="#inicio" class="btn rounded-pill fw-bold px-5 py-2 volverIndex-btn titulos">VOLVER AL
+                        INICIO <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- ============== INNOVACIÓN ============== -->
-        <section>
-            <div class="container-fluid">
-                <div class="row innovation">
-                    <div class="col-6 innovation-left">
-                        <video src="./static/media/videos/canserbero.mp4" autoplay="true" loop="true" muted="true"></video>
-                        <!-- ID para hacer link interno -->
-                        <div id="video-stats" class="grid-cards">
-                            <div class="innovation-card">
-                                <h2>+10.000</h2>
-                                <p class="">eventos organizados sin complicaciones.</p>
-                            </div>
-                            <div class="innovation-card">
-                                <h2>95%</h2>
-                                <p class="">de usuarios repiten porque salen encantados.</p>
-                            </div>
-
-                            <div class="innovation-card">
-                                <h2>2 minutos</h2>
-                                <p class="">y tienes tu evento reservado. Así de fácil.</p>
-                            </div>
-
-                            <div class="innovation-card">
-                                <h2>+500</h2>
-                                <p class="">espacios y proveedores que ya van con nosotros.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-6 innovation-right">
-                        <h3 class="titulos">INNOVADORES EN RESERVA DE EVENTOS</h3>
-                        <div class="innovation-description">
-                            <p class="">
-                                Nos cargamos las reservas aburridas. Hacemos que organizar eventos sea fácil, rápido y
-                                sin complicaciones. Nada de rollos, solo lo que necesitas, cuando lo necesitas.
-                            </p>
-                            <a href="#footer">
-                                <span class="boton-flecha-elemento titulos ">CONTACTO <i class="fa-solid fa-arrow-down"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </footer>
 
 
 
-        </section>
-
-        <footer>
-            <div id="footer" class="container">
-                <div class="row informacionContacto">
-                    <div class="col-2 redesSociales">
-                        <div>
-                            <p><a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
-                                       eventbook_live</a></p>
-                            <p><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i>
-                                       eventbook_vibes</a>
-                            </p>
-                            <p><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>
-                                       eventbook_official</a></p>
-                        </div>
-                    </div>
-                    <div class="col-3 responsables">
-                        <div>
-                            <h4 class="titulos">Responsables</h4>
-                            <p>Presidente: Juan Pérez</p>
-                            <p>Vicepresidente: Ana Gómez</p>
-                            <p>Director General: Carlos López</p>
-                            <br>
-                        </div>
-                        <div>
-                            <h4 class="titulos">Contacto</h4>
-                            <p>Correo: contacto@web-eventos.com</p>
-                            <p>Teléfono: +34 123 456 789</p>
-                            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
-                        </div>
-                    </div>
-                    <div class="col-7 contacto">
-                        <img src="./static/media/img/aboutus.png" alt="" class="about-us">
-                        
-                    </div>
-                    <div class="col-6 d-flex justify-content-end" id="volverIndex-btn">
-                        <a href="index.html" class="btn rounded-pill fw-bold px-5 py-2 volverIndex-btn titulos">VOLVER AL INICIO <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-
-        <script defer src="./static/js/bootstrap.min.js"></script>
-    </body>
+    <script defer src="./static/js/bootstrap.min.js"></script>
+</body>
 
 
 </html>
-
