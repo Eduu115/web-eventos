@@ -66,13 +66,13 @@
   position: absolute;
   background: white;
   color: #f64001;
-  font-size: 30px; 
+  font-size: 30px;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-right: 225px;
-  padding: 20px 40px; 
+  padding: 20px 40px;
   margin-top: -110px;
 }
 
@@ -104,7 +104,7 @@
   max-width: fit-content;
 }
 
-.vision{
+.vision {
   margin-top: 5%;
   width: 230px;
   height: 230px;
@@ -131,7 +131,6 @@
 
 .tituloLanding {
   font-size: 120px;
-
 }
 
 .descripcionLanding {
@@ -172,7 +171,6 @@
   border-radius: 16px;
   padding: 69px 10px 55px;
   height: 100%;
-  
 }
 
 .card-img-top {
@@ -194,10 +192,10 @@
 .card-body p {
   text-align: justify;
 }
-span{
+span {
   float: right;
 }
-.boton-flecha-cont{
+.boton-flecha-cont {
   align-self: end;
 }
 
@@ -215,9 +213,9 @@ span{
 }
 
 .boton-flecha-elemento:hover {
-background-color: #000000;
-color: white;
-border: 2px solid white;
+  background-color: #000000;
+  color: white;
+  border: 2px solid white;
 }
 
 /* ─────────────────────  INNOVACIÓN  ───────────────────── */
@@ -278,7 +276,7 @@ video {
 }
 
 .innovation-card h2 {
-font-size: 34px;
+  font-size: 34px;
 }
 .innovation-description {
   width: 65%;
@@ -288,11 +286,12 @@ font-size: 34px;
 /* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
 
 #no-te-lo-pierdas {
-  background-color: #1E272B; /* gris claro */
+  background-color: #1e272b;
   padding: 30px 0;
   color: #ffffff;
   text-align: center;
   width: 100%;
+  padding-left: 130px;
 }
 
 #no-te-lo-pierdas p {
@@ -317,11 +316,10 @@ font-size: 34px;
   color: #f64001;
 }
 
-
 /* CONTACTO */
 
 footer {
-  background-color: #1E272B;
+  background-color: #1e272b;
   padding: 10px 5px;
 }
 
@@ -330,9 +328,9 @@ footer {
   padding: 10px 5px;
 }
 
-#footer_logo{
+#footer_logo {
   display: flex;
-  justify-content: flex-start;  
+  justify-content: flex-start;
   padding-right: -30px;
 }
 
@@ -384,37 +382,35 @@ footer {
 #footer_text_and_icons {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  padding: 0 20px; 
-  color: white; 
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
 }
-
 
 #footer_text_and_icons p {
   margin: 0;
-  flex: 1; 
-  max-width: 70%; 
+  flex: 1;
+  max-width: 70%;
   margin-left: 20px;
 }
 
-
 .redesSociales_2 p {
   margin: 0;
-  color: white; 
+  color: white;
 }
 
 .redesSociales_2 a {
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
 
 .redesSociales_2 > div {
-  display: flex; 
-  gap: 15px; 
+  display: flex;
+  gap: 15px;
   margin-left: -10;
   padding-left: 0;
 }
