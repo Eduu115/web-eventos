@@ -25,6 +25,7 @@
     <!-- CSS INTERNO -->
     <link rel="stylesheet" href="./static/css/main.css">
     <link rel="stylesheet" href="./static/css/vistaTodos.css">
+    <script src="./static/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -65,36 +66,76 @@
             <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content custom-modal-style">
-                        <div class="modal-body">
-                            <div class="row">
-                                <!-- Columna izquierda -->
-                                <div class="col-md-6 text-center">
-                                    <h5 id="infoModalLabel" class="text-white">Card title</h5>
-                                    <img src="./static/media/img/CONCIERTOS/concierto1.jpg" alt="FotoEvento1"
-                                        class="img-fluid mt-3">
+                        <div class="modal-body text-white">
+                            <form action="/tu-endpoint-post" method="POST">
+                                <div class="container-fluid">
+                                    <!-- Fila 1: Título + imagen -->
+                                    <div class="row text-center mb-4">
+                                        <div class="col-12">
+                                            <h5 id="infoModalLabel" class="mb-3 titulos h2">Luis Miguel - Tour 2025</h5>
+                                            <img src="./static/media/img/CONCIERTOS/concierto1.jpg" alt="FotoEvento1"
+                                                class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
+                                        </div>
+                                    </div>
+
+                                    <!-- Fila 2: Info a la izquierda, observaciones a la derecha -->
+                                    <div class="row">
+                                        <!-- Columna izquierda -->
+                                        <div class="col-md-6">
+                                            <p><strong>Descripción:</strong> Un show inolvidable del Sol de México con
+                                                todos sus éxitos.</p>
+                                            <p><strong>Duración:</strong> 2 horas</p>
+                                            <p><strong>Dirección:</strong> WiZink Center, Madrid</p>
+                                            <p><strong>Fecha inicio:</strong> 15 de Julio, 2025</p>
+                                            <p><strong>Precio:</strong> 75€ por entrada</p>
+                                        </div>
+
+                                        <!-- Columna derecha -->
+                                        <div class="col-md-6 d-flex flex-column justify-content-between">
+                                            <!-- Observaciones -->
+                                            <div class="mb-3">
+                                                <label for="observaciones" class="form-label">Observaciones</label>
+                                                <textarea class="form-control custom-input" id="observaciones"
+                                                    name="observaciones" rows="4"
+                                                    placeholder="Ej: Necesito acceso para silla de ruedas"></textarea>
+                                            </div>
+
+                                            <!-- Cantidad + botón -->
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label for="cantidad" class="form-label">Cantidad</label>
+                                                    <select class="form-select custom-input" id="cantidad"
+                                                        name="cantidad" required>
+                                                        <option value="">Selecciona</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 d-flex align-items-end">
+                                                    <button type="submit"
+                                                        class="btn btn-outline-light mt-2 w-100">Reservar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Columna derecha -->
-                                <div class="col-md-6 d-flex flex-column justify-content-between text-white">
-                                    <p class="mt-3">Aquí puedes escribir una descripción más detallada del evento,
-                                        producto o lo que desees.</p>
-                                    <button class="btn btn-outline-light align-self-end">Guardar</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Estilos personalizados -->
-            <style>
-                .custom-modal-style {
-                    background-color: #1E272B;
-                    border: 2px solid white;
-                }
-            </style>
 
 
-            <!-- FIN SECCION CONTACTO -->
+        <!-- FIN SECCION CONTACTO -->
     </main>
 
     <!-- LOAD BS -->

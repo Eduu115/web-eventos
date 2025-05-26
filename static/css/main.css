@@ -38,3 +38,25 @@ nav a{
   color: white;
   cursor: pointer;
 }
+
+.custom-modal-style {
+  background-color: #1E272B;
+  border: 2px solid white;
+}
+
+.custom-input {
+  background-color: #1E272B;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.custom-input::placeholder {
+  color: #aaa;
+}
+
+.custom-input:focus {
+  background-color: #1E272B;
+  color: white;
+  border-color: #fff;
+  box-shadow: none;
+}
