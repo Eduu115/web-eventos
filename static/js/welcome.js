@@ -9,6 +9,6 @@ spanSaludo = document.createElement('span');
 if (usuario != null){
     spanSaludo.innerHTML=`Bienvenido/a  ${usuario.nombre}`;
 } else {
-    spanSaludo.innerHTML=" "; //vacio si no ha iniciado sesion
+    spanSaludo.innerHTML=" "; //vacio si no ha iniciado
 }
 contenedorBienvenida.appendChild(spanSaludo);
