@@ -11,6 +11,9 @@ nav a {
     cursor: pointer;
 }
 
+nav i{
+  color: white;
+}
 
 nav h1 {
     margin-top:19px;
