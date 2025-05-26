@@ -285,11 +285,62 @@ font-size: 34px;
   font-size: 3px;
 }
 
+/* ─────────────────────  QUIÉNES SOMOS  ───────────────────── */
+
+#no-te-lo-pierdas {
+  background-color: #1E272B; /* gris claro */
+  padding: 30px 0;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+#no-te-lo-pierdas p {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 500;
+  margin-right: 340px;
+}
+
+#no-te-lo-pierdas .login-btn {
+  font-size: 18px;
+  padding: 10px 30px;
+  border: none;
+  background-color: #f64001;
+  color: white;
+  transition: all 0.3s ease;
+  margin-left: 400px;
+}
+
+#no-te-lo-pierdas .login-btn:hover {
+  background-color: #000;
+  color: #f64001;
+}
+
+
 /* CONTACTO */
 
 footer {
+  background-color: #1E272B;
+  padding: 10px 5px;
+}
+
+#footer-section {
   background-color: #f64001;
-  min-height: 110vh;
+  padding: 10px 5px;
+}
+
+#footer_logo{
+  display: flex;
+  justify-content: flex-start;  
+  padding-right: -30px;
+}
+
+#footer_logo img {
+  transform: scale(0.5);
+  transform-origin: center;
+  width: 150px;
+  height: auto;
 }
 
 .informacionContacto {
@@ -328,4 +379,50 @@ footer {
 
 .about-us {
   width: 70%;
+}
+
+#footer_text_and_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 20px; 
+  color: white; 
+}
+
+
+#footer_text_and_icons p {
+  margin: 0;
+  flex: 1; 
+  max-width: 70%; 
+  margin-left: 20px;
+}
+
+
+.redesSociales_2 p {
+  margin: 0;
+  color: white; 
+}
+
+.redesSociales_2 a {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.redesSociales_2 > div {
+  display: flex; 
+  gap: 15px; 
+  margin-left: -10;
+  padding-left: 0;
+}
+
+.redesSociales_2 a:hover {
+  color: #f64001;
+}
+
+.redesSociales_2 i {
+  font-size: 22px;
 }
