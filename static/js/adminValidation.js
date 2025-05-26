@@ -7,7 +7,7 @@ fetch('http://localhost:9003/perfil/uno/1')
 
     // cargamos el usuario de localStorage
     const usuario = JSON.parse(localStorage.getItem('user') || '{}');
-    console.log("Usuario LS:", usuario);
+    // console.log("Usuario LS:", usuario);
 
     const link = document.getElementById("admin-link");
 
