@@ -1,3 +1,13 @@
+/* Layout base para body y html */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #1E272B; /* mantenemos tu fondo */
+}
+
+/* Nav sigue igual */
 nav {
   align-items: center;
   background: #f64001;
@@ -14,20 +24,21 @@ nav a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-
 }
-nav i{
+nav i {
   color: white;
 }
-
 nav h1 {
   margin-top: 9px;
 }
 
-body {
-  background-color: #1E272B;
+/* Main ocupa espacio disponible */
+main {
+  flex: 1 0 auto;
+  /* elimina height: 100%; */
 }
 
+/* Otros estilos tuyos que puedes mantener */
 .card {
   background-color: #14191d;
   color: white;
@@ -37,16 +48,10 @@ body {
 button {
   border: none;
   border-radius: 10px;
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 5px 20px;
   background-color: #f64001;
   color: white;
   box-shadow: 0px 0px 20px black;
-}
-
-main {
-  height: 100%;
 }
 
 .encabezado {
@@ -94,4 +99,70 @@ div img, svg {
 
 .titulo-dashboard {
   font-size: 4rem;
+}
+
+/* Footer siempre abajo */
+footer {
+  flex-shrink: 0;
+  background-color: #1E272B;
+  padding: 10px 5px;
+  color: white;
+}
+
+/* Otros estilos footer */
+#footer_logo {
+  display: flex;
+  justify-content: flex-start;  
+  padding-right: 0;
+}
+
+#footer_logo img {
+  transform: scale(0.5);
+  transform-origin: center;
+  width: 150px;
+  height: auto;
+}
+
+#footer_text_and_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 20px; 
+  color: white; 
+}
+
+#footer_text_and_icons p {
+  margin: 0;
+  flex: 1; 
+  max-width: 70%; 
+  margin-left: 20px;
+}
+
+.redesSociales_2 p {
+  margin: 0;
+  color: white; 
+}
+
+.redesSociales_2 a {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.redesSociales_2 > div {
+  display: flex; 
+  gap: 15px; 
+  margin-left: -10px;
+  padding-left: 0;
+}
+
+.redesSociales_2 a:hover {
+  color: #f64001;
+} 
+
+.redesSociales_2 i {
+  font-size: 22px;
 }
