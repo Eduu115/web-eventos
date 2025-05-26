@@ -1,162 +1,257 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
 body {
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: rgb(51, 50, 50);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-
 nav {
-    align-items: center;
-    background: #1e272b;
-    border-bottom: 2px solid #f64001;
-    padding-bottom: 15px;
+  background-color: #1e272b;
+  border-bottom: 1px solid #f64001;
 }
-
 nav a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
-
 nav h1 {
-    margin-top: 9px;
+  margin-top: 9px;
+  padding-left: 15px;
 }
-
-.card {
-    background-color: rgb(34, 33, 33);
-    color: white;
-}
-
-button {
-    border: none;
-    border-radius: 10px;
-    padding: 5px 40px;
+section {
+  height: 54rem;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  padding-bottom: 20px;
 }
 
 main {
-    flex-grow: 1;
-    padding: 20px;
+  background-color: #1e272b;
+}
+
+.titulo-reservas {
+  font-size: 4rem;
+}
+
+/* Layout base para body y html */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e272b; /* mantenemos tu fondo */
+}
+
+nav img {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 2px;
+}
+nav a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+nav i {
+  color: white;
+}
+nav h1 {
+  margin-top: 9px;
+}
+
+/* Main ocupa espacio disponible */
+main {
+  flex: 1 0 auto;
+  /* elimina height: 100%; */
+}
+
+/* Otros estilos tuyos que puedes mantener */
+.card {
+  background-color: #14191d;
+  color: white;
+  margin-top: 5px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  background-color: #f64001;
+  color: white;
+  box-shadow: 0px 0px 20px black;
 }
 
 .encabezado {
-    height: 15%;
+  height: 15%;
 }
 
 .row {
-    padding: 40px;
+  padding: 40px;
 }
 
 #seccion-reservas {
-    padding-top: 0;
+  padding-top: 0;
 }
 
+.contenedor-botones {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-height: 145px;
+  gap: 20px;
+}
+.contenedor-botones a {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  background-color: #f64001;
+}
+
+.dashboard-imagen {
+  max-height: 200px;
+}
+
+div img,
+svg {
+  vertical-align: middle;
+  width: 100%;
+  border: 0.2px solid #ffffff48;
+  border-radius: 7px;
+  box-shadow: 0px 0px 20px black;
+  max-height: 140px;
+}
+
+.seccion-imagen {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-dashboard {
+  font-size: 4rem;
+}
+
+/* Footer siempre abajo */
 footer {
-    background-color: #1E272B;
-    padding: 10px 5px;
-    color: white;
+  flex-shrink: 0;
+  background-color: #1e272b;
+  padding: 10px 5px;
+  color: white;
 }
 
+/* Otros estilos footer */
 #footer_logo {
-    display: flex;
-    justify-content: flex-start;
-    /* Elimina padding-right negativo */
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 0;
 }
 
 #footer_logo img {
-    transform: scale(0.5);
-    transform-origin: center;
-    width: 150px;
-    height: auto;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.informacionContacto {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.responsables {
-    border-left: 1px solid black;
-}
-
-.contacto {
-    display: flex;
-    justify-content: center;
-}
-
-.redesSociales a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.redesSociales a:hover {
-    font-weight: 700;
-}
-
-.redesSociales i {
-    font-size: 20px;
-}
-
-.responsables h4 {
-    font-size: 30px;
-}
-
-.about-us {
-    width: 70%;
+  transform: scale(0.5);
+  transform-origin: center;
+  width: 150px;
+  height: auto;
 }
 
 #footer_text_and_icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
 }
 
 #footer_text_and_icons p {
-    margin: 0;
-    flex: 1;
-    max-width: 70%;
-    margin-left: 20px;
+  margin: 0;
+  flex: 1;
+  max-width: 70%;
+  margin-left: 20px;
 }
 
 .redesSociales_2 p {
-    margin: 0;
-    color: white;
+  margin: 0;
+  color: white;
 }
 
 .redesSociales_2 a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .redesSociales_2 > div {
-    display: flex;
-    gap: 15px;
-    margin-left: -10px;
-    padding-left: 0;
+  display: flex;
+  gap: 15px;
+  margin-left: -10px;
+  padding-left: 0;
 }
 
 .redesSociales_2 a:hover {
-    color: #f64001;
+  color: #f64001;
 }
 
 .redesSociales_2 i {
-    font-size: 22px;
+  font-size: 22px;
+}
+
+/* saludo */
+#bienvenido-saludo span {
+  color: #f64001;
+}
+
+.form-control {
+  display: block;
+  width: 150%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #1e272b;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15sease-in-out, box-shadow 0.15sease-in-out;
+}
+
+.form-control:focus {
+  border-color: #ffffff;
+  background-color: #1e272b;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.2rem #f64001; /* glow naranja */
+}
+.evento-detalles {
+  margin: 3% 7% 5% 0%;
+  gap: 300px;
+}
+
+button.btn.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #f64001;
+  --bs-btn-border-color: #f64001;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #f64001;
+  --bs-btn-hover-border-color: #f64001;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #f64001;
+  --bs-btn-active-border-color: #f64001;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #f64001;
+  --bs-btn-disabled-border-color: #f64001;
+}
+
+.guardarEditar {
+  width: 65%;
+  padding-top: 12px;
+}
+
+.contenedor-principal-reservas {
+  display: flex;
+  flex-direction: column;
 }
