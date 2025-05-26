@@ -60,3 +60,14 @@ nav a{
   border-color: #fff;
   box-shadow: none;
 }
+
+#bienvenido-saludo span{
+  color: #F14001;
+  font-size: 22px;
+}
+
+#bienvenido-saludo{
+  flex: 1;
+  padding-right: 2%;
+  text-align: right;
+}
