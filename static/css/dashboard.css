@@ -166,3 +166,8 @@ footer {
 .redesSociales_2 i {
   font-size: 22px;
 }
+
+/* saludo */
+#bienvenido-saludo span{
+  color: #1E272B;
+}
