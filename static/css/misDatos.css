@@ -1,0 +1,68 @@
+html, body{
+    height: 100vh;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0 5% 0;
+    margin: 0;
+    background-color: #F9F1E8;
+}
+nav{
+    background-color: #1E272B;
+    border-bottom: 2px solid #F64001;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.neomorphic-form {
+    height: 80%;
+    color: white;
+    background: #1E272B;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 15px #f63e0175, -8px -8px 15px #f63e0169;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 22px;
+    /* Updated border-radius */
+    background-color: #f8f8f8;
+    box-shadow: inset 6px 6px 10px #d1d1d1, inset -6px -6px 10px #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    background-color: #F64001;
+    color: white;
+}
+
+button:hover{
+    background-color: #1E272B;
+}
+
+button:active {
+    background-color: white;
+}
