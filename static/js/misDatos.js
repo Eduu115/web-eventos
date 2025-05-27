@@ -1,6 +1,6 @@
 // ============================= VARIABLES GLOBALES =========================
 // obtener el usuario
-const usuario = JSON.parse(localStorage.getItem('user') || '{}');
+let usuario = JSON.parse(localStorage.getItem('user') || '{}');
 // obtener Boton editar
 let btn_edit = document.getElementById("boton-modificar");
 
