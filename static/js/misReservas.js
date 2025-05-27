@@ -29,8 +29,3 @@ fetch(``, {})
   
 )
 .catch();
-
-
- const deleteButton = col.querySelector(".btn-delete"); 
- deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
-
