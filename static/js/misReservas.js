@@ -94,8 +94,8 @@ function renderizarReservas(){
       let deleteButton = col.querySelector(".btn-delete");
       deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
       
-      let editButton = col.querySelector("btn-edit");
-      editButton.addEventListener("click",()=>{editarReserva(idReserva)});
     });
+    let editButton = col.querySelector("btn-edit");
+    editButton.addEventListener("click",() => editarReserva(idReserva) );
     
 };

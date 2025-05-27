@@ -1,7 +1,9 @@
+usuario = JSON.parse(localStorage.getItem('user') || '{}');
+console.log(usuario);
 let destacados = [];
 let activosNoD = [];
 let soldOut = [];
-
+// ====================================================== FETCH'S ===================================
 // fetch filtrado por dest
 fetch('http://localhost:9003/evento/activoAndDestacado/S')
   .then(res => res.json())
@@ -23,6 +25,8 @@ fetch('http://localhost:9003/evento/estado/TERMINADO')
   soldOut = data;
   renderEventosSoldOut();
 });
+
+// ======================================== DESTACADOS ===========================
 
 // Destacados 1
 function renderEventosD() {
@@ -114,8 +118,11 @@ function renderEventosD() {
     </div>
   `;
     col1.appendChild(card);
-  });
+    //reservarClick
+    let btn_reservar = col1.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento));
 
+  });
   destacados.slice(2, 4).forEach(d => {
     const modalId = `infoModal-${d.idEvento}`; // id único para cada modal
     let card = document.createElement('div');
@@ -193,9 +200,13 @@ function renderEventosD() {
     </div>
   `;
     col2.appendChild(card);
+    //reserva call
+    let btn_reservar = col2.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento));
   });
 }
 
+// =========================================================== ACTIVOS ===========================
 
 function renderEventosA() {
   const rowMain = document.getElementById('fila-eventos-activos');
@@ -286,8 +297,10 @@ function renderEventosA() {
     </div>
   `;
     col1.appendChild(card);
+    //reserva call
+    let btn_reservar = col1.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento))
   });
-
   activosNoD.slice(2, 4).forEach(d => {
     const modalId = `infoModal-${d.idEvento}`; // id único para cada modal
     let card = document.createElement('div');
@@ -365,9 +378,13 @@ function renderEventosA() {
     </div>
   `;
     col2.appendChild(card);
+    //reserva call
+    let btn_reservar = col2.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento))
   });
 }
 
+// =========================================================== SOLD OUT =====================================
 
 // Sold-out 1
 function renderEventosSoldOut() {
@@ -381,7 +398,6 @@ function renderEventosSoldOut() {
   const col2 = document.createElement('div');
   col2.className = "col-6 sub-columna2-eventos";
   rowMain.appendChild(col2);
-
   soldOut.slice(0, 2).forEach(d => {
     const modalId = `infoModal-${d.idEvento}`; // id único para cada modal
     let card = document.createElement('div');
@@ -459,12 +475,24 @@ function renderEventosSoldOut() {
     </div>
   `;
     col1.appendChild(card);
+
+    let btn_reservar = col1.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        d.idEvento,
+        document.getElementById(`cantidad-${d.idEvento}`).value,
+        document.getElementById(`observaciones-${d.idEvento}`).value,
+        d.precio
+      )
+    })
   });
 
   soldOut.slice(2, 4).forEach(d => {
     const modalId = `infoModal-${d.idEvento}`; // id único para cada modal
     let card = document.createElement('div');
     card.className = 'contenedor-card';
+    console.log(d.precioVenta);
     card.innerHTML = `
 
     <div class="card" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#${modalId}">
@@ -538,5 +566,50 @@ function renderEventosSoldOut() {
     </div>
   `;
     col2.appendChild(card);
+    //reserva call
+    let btn_reservar = col2.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        d.idEvento,
+        document.getElementById(`cantidad-${d.idEvento}`).value,
+        document.getElementById(`observaciones-${d.idEvento}`).value,
+        d.precio
+      )
+
+    })
+
   });
+}
+
+function resrvarEvento(idEvento, cantidad, observaciones, precioVenta){
+  // reservar un evento, mandar al fetch la id evento y la id user unicamente las id
+  // ademas de cantidad y anotacion
+  const idUsuario = usuario.idUsuario;
+  const reservaDTO = {
+    idEvento: idEvento,
+    idUsuario: idUsuario,
+    cantidad: cantidad,
+    observaciones: observaciones,
+    precioVenta: precioVenta
+  }
+
+  console.log(reservaDTO);
+
+  fetch('http://localhost:9003/reserva/altaReserva', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(reservaDTO)
+  })
+  .then(res => {
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.json();
+  })
+  .then(data => {
+    console.log("Reserva realizada:", data);
+    // Opcional: mostrar mensaje de éxito, cerrar modal, etc.
+  })
+  .catch(err => console.error("Error al enviar:", err));
 }
