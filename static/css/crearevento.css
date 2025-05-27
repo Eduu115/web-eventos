@@ -3,8 +3,8 @@ nav {
 }
 
 
-nav h1 {
-  margin-top: -4px;
+nav h1{
+  margin-top: -4px;   
 }
 
 
@@ -14,9 +14,13 @@ nav img {
   margin-bottom: 20px;
 }
 
+nav i{
+color: white;
+}
+
 
 body {
-  background-color: #1E272B;
+  background-color: rgb(51, 50, 50);
   margin: 0;
   padding: 0;
 }
@@ -53,7 +57,7 @@ button {
 }
 
 
-h2 {
+h2{
   color: white;
   text-align: center;
   margin-bottom: 30px;
@@ -79,7 +83,7 @@ h2 {
   color: white;
   width: 100%;
   max-width: 600px;
-
+  
 }
 
 
@@ -98,11 +102,11 @@ h2 {
 .formulario select {
   flex: 0 0 300px;
   max-width: 100%;
-  padding: 5px 10px;
+  padding: 5px 10px;  
   border-radius: 5px;
   border: none;
   background-color: #ffffff;
-  color: #000;
+  color: #000; 
 }
 
 
@@ -112,29 +116,25 @@ h2 {
   box-sizing: border-box;
 }
 
-#contenedor-enviar {
+#contenedor-enviar{
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
-#enviar {
+#enviar{
   width: 100%;
   background-color: #ffffff;
   color: #F64001;
   transition: transform 0.5s;
   transition: background-color 0.1s ease-in;
 }
-
-#enviar:hover {
+#enviar:hover{
   transform: scale(1.05);
 }
-
-#enviar:active {
+#enviar:active{
   background-color: #F64001;
 }
-
-textarea {
+textarea{
   border-radius: 5px;
 }
 
@@ -149,9 +149,9 @@ footer {
   padding: 10px 5px;
 }
 
-#footer_logo {
+#footer_logo{
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start;  
   padding-right: -30px;
 }
 
@@ -185,7 +185,6 @@ footer {
   cursor: pointer;
   font-size: 15px;
 }
-
 .redesSociales a:hover {
   font-weight: 700;
 }
@@ -193,7 +192,6 @@ footer {
 .redesSociales i {
   font-size: 20px;
 }
-
 .responsables h4 {
   font-size: 30px;
 }
@@ -205,37 +203,37 @@ footer {
 #footer_text_and_icons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  color: white;
+  justify-content: space-between; 
+  padding: 0 20px; 
+  color: white; 
 }
 
 
 #footer_text_and_icons p {
   margin: 0;
-  flex: 1;
-  max-width: 70%;
+  flex: 1; 
+  max-width: 70%; 
   margin-left: 20px;
 }
 
 
 .redesSociales_2 p {
   margin: 0;
-  color: white;
+  color: white; 
 }
 
 .redesSociales_2 a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px; 
   color: white;
   font-size: 18px;
   text-decoration: none;
 }
 
-.redesSociales_2>div {
-  display: flex;
-  gap: 15px;
+.redesSociales_2 > div {
+  display: flex; 
+  gap: 15px; 
   margin-left: -10;
   padding-left: 0;
 }
@@ -246,9 +244,4 @@ footer {
 
 .redesSociales_2 i {
   font-size: 22px;
-}
-
-/* saludo */
-#bienvenido-saludo span {
-  color: #1E272B;
 }

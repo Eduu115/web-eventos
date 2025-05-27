@@ -20,6 +20,10 @@ nav img{
     margin-bottom: 23px;
 }
 
+nav i {
+  color: white;
+}
+
 
 body {
     background-color: rgb(51, 50, 50);

@@ -17,6 +17,10 @@ nav h1 {
   margin-top:0px;
 }
 
+nav i{
+  color: white;
+}
+
 nav img{
   margin-bottom: 23px;
 }
