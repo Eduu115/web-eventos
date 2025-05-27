@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form_enviar.addEventListener('submit', (event) => {
         event.preventDefault();
-        console.log("hola");
+        // console.log("hola");
         const apellido1 = document.getElementById("apellido1").value;
         const apellido2 = document.getElementById("apellido2").value;
 
