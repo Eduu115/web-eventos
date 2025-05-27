@@ -31,9 +31,10 @@
 
 <body>
     <nav class="container-fluid d-flex">
-        <h1 class="titulos text-white tituloLogin"><a href="index.html">EVENTBOOK<img src="./static/media/img/SoloLogoSF500x250.png" alt="logo" height="50px" width="130px"></a>
+        <h1 class="ps-0 titulos text-white tituloLogin">
+            <a href="index.html">EVENTBOOK<img src="./static/media/img/SoloLogoSF500x250.png" alt="logo" height="50px" width="130px"></a>
         </h1>
-        <h1 class="titulos text-white"><a href="home.html">HOME<i class="fa-solid fa-up-right-from-square"></i></a></h1>
+        <h1 class="text-white"><a href="vistaEventos.html"><i class="fa-solid fa-arrow-left"></i> Volver</a></h1>
     </nav>
     <!-- INICIO MAIN -->
     <main>
@@ -45,6 +46,46 @@
             <div id="seccion-reservas" class="container-fluid p-3 ps-0 d-grid">
                 <div id="row-reservas" class="row g-2">
                     <!-- forEach reservas -->
+                    <div class="col-12 evento">
+                        <!-- La col es lo que creo -->
+                        <div class="card d-grid">
+                            <div class="row">
+                                <div class="contenedor-info col-5">
+                                    <p>Nombre evento : ${r.evento.nombre}</p>
+                                    <p>Cantidad : ${r.cantidad}</p>
+                                    <p>Precio Venta : ${r.precioVenta}€</p>
+                                    <p>Observaciones: ${r.observaciones}</p>
+                                </div>
+                                <div class="contenedor-botones col-5 d-flex justify-content-center">
+                                    <button class="me-4 button btn-edit" data-bs-toggle="collapse" data-bs-target="#collapse-editar-${r.idReserva
+                                                    }" aria-expanded="false" aria-controls="collapse-editar-${r.idReserva
+                                                    }">Editar</button>
+                                    <button class="me-4 button btn-delete" data-id="${r.idReserva
+                                                    }">Eliminar</button>
+                                </div>
+                                <div class="col-2 seccion-imagen">
+                                    <img class="imagen-dashboard" src="${r.evento.rutaImagen
+                                                    }" alt="imagen-evento">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="collapse mt-2" id="collapse-editar-${r.idReserva}">
+                            <div class="card card-body d-flex justify-content-center align-items-center ">
+                                <div class="evento-detalles d-flex flex-row align-items-center">
+                                    <p><strong>Cantidad:</strong>
+                                        <input type="text" class="form-control" value="${r.cantidad}">
+                                    </p>
+                                    <p><strong>Observaciones:</strong>
+                                        <input type="text" class="form-control" value="${r.observaciones}">
+                                    </p>
+                                    <button class="btn btn-primary">Guardar cambios</button>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

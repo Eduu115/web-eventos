@@ -11,7 +11,7 @@ fetch(`http://localhost:9003/reserva/usuario/${idUsuario}`)
     reservasUsuario = data;
     renderizarReservas();
 })
-.catch((err) => console.error("Error al cargar reservas:", err));
+.catch(err => console.error("Error al cargar reservas:", err));
 
 
 // ============================================== FUNCIONES ==============================================
@@ -39,12 +39,17 @@ function editarReserva(){
 // =============================================== RENDER ==================================================
 function renderizarReservas(){
   //identifico constantes
+  const row = document.getElementById("row-reservas");
+  row.innerHTML= " "; // limpio
   reservasUsuario.forEach(r =>{
+    console.log(reservasUsuario);
     // declaro constantes
-    let row = document.getElementById("row-reservas");
-    console.log("boton pillao")
-      row.innerHTML= " "; // limpio
-      row.innerHTML = `
+    let col = document.createElement("div");
+    col.classList = "col-12 evento";
+
+    console.log("col pillao")
+      
+      col.innerHTML = `
         <div class="card d-grid">
           <div class="row">
             <div class="contenedor-info col-5">
@@ -83,12 +88,14 @@ function renderizarReservas(){
           </div>
         </div>
       `;
-
-      const deleteButton = row.querySelector(".btn-delete");
+      
+      row.appendChild(col);
+      
+      let deleteButton = col.querySelector(".btn-delete");
       deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
-
-      const editButton = row.querySelector("btn-edit");
-      editButton.addEventListener("click",()=>{editarReserva(idReserva)})
-    })
+      
+    });
+    let editButton = col.querySelector("btn-edit");
+    editButton.addEventListener("click",() => editarReserva(idReserva) );
     
 };
