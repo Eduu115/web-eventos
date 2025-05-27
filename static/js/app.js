@@ -1,11 +1,11 @@
 let reservas = [];
 // fetch cargamos los datos
 fetch("http://localhost:9003/evento/todos")
-.then((res) => res.json())
-.then((data) => {
-  reservas = data;
-  renderizarReservas();
-});
+  .then((res) => res.json())
+  .then((data) => {
+    reservas = data;
+    renderizarReservas();
+  });
 
 function eliminarReserva(idEvento) {
   fetch(`http://localhost:9003/evento/eliminar/${idEvento}`, {
@@ -144,21 +144,27 @@ function renderizarReservas() {
           <input type="number" class="form-control" value="${r.precio}">
         </p>
         <p><strong>Estado:</strong>
-          <input type="text" class="form-control" value="${r.estado}">
+           <select class="form-control">
+            <option value="ACTIVO" ${r.estado === 'ACTIVO' ? 'selected' : ''}>ACTIVO</option>
+            <option value="CANCELADO" ${r.estado === 'CANCELADO' ? 'selected' : ''}>CANCELADO</option>
+            <option value="FINALIZADO" ${r.estado === 'FINALIZADO' ? 'selected' : ''}>FINALIZADO</option>
+          </select>
         </p>
         <p><strong>Destacado:</strong>
           <select class="form-control">
-            <option value="true" ${r.destacado ? "selected" : ""}>Sí</option>
-            <option value="false" ${!r.destacado ? "selected" : ""}>No</option>
+              <option value="S" ${r.destacado === 'S' ? 'selected' : ''}>Sí</option>
+              <option value="N" ${r.destacado === 'N' ? 'selected' : ''}>No</option>
           </select>
         </p>
-        <div class="d-flex justify-content-center guardarEditar">
+        
+
+      </div>
+      
+    </div>
+    <div class="d-flex justify-content-center guardarEditar mt-3">
                   <button class="btn btn-primary">Guardar cambios</button>
 
 </div>
-
-      </div>
-    </div>
     
   </div>
 </div>
