@@ -94,7 +94,7 @@ function renderizarReservas() {
 </div>
     `;
 
-        const deleteButton = col.querySelector(".btn-delete");
+        const deleteButton = col.querySelector(".btn-delete"); 
         deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
 
         row.appendChild(col);
