@@ -1,11 +1,11 @@
 let reservas = [];
 // fetch cargamos los datos
 fetch("http://localhost:9003/evento/todos")
-  .then((res) => res.json())
-  .then((data) => {
-    reservas = data;
-    renderizarReservas();
-  });
+.then((res) => res.json())
+.then((data) => {
+  reservas = data;
+  renderizarReservas();
+});
 
 function eliminarReserva(idEvento) {
   fetch(`http://localhost:9003/evento/eliminar/${idEvento}`, {

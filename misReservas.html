@@ -27,14 +27,6 @@
     <!-- CSS PROPIO -->
     <link rel="stylesheet" href="./static/css/misreservas.css">
 
-    <!-- Script saludo -->
-    <script defer src="./static/js/welcome.js"></script>
-
-    <!-- Script validacion -->
-    <script src="./static/js/adminValidation.js"></script>
-
-    <script src="./static/js/misReservas.js"></script>
-
 </head>
 
 <body>
@@ -46,12 +38,12 @@
     <!-- INICIO MAIN -->
     <main>
         <!-- INICIO CONTENEDOR FOREACH SECCION DESTACADOS -->
-        <section id="contenedor-principal-reservas " class="p-3 d-flex flex-column">
+        <section id="contenedor-principal-reservas" class="p-3 d-flex flex-column">
             <div class="encabezado p-1 text-white">
                 <h1 class="titulos titulo-dashboard">LISTA DE RESERVAS</h1>
             </div>
             <div id="seccion-reservas" class="container-fluid p-3 ps-0 d-grid">
-                <div class="row g-2">
+                <div id="row-reservas" class="row g-2">
                     <!-- forEach reservas -->
                 </div>
             </div>
@@ -83,7 +75,7 @@
     <!-- CARGAR BOOTSTRAP JS -->
     <script defer src="./static/js/bootstrap.min.js"></script>
     <!-- SCRIPT funcional -->
-
+    <script src="./static/js/misReservas.js"></script>
 </body>
 
 </html>
