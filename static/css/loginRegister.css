@@ -139,7 +139,7 @@ path {
   position: absolute;
 }
 label {
-  color: #1e272b;
+  color: #535353;
   display: block;
   font-size: 14px;
   height: 16px;
@@ -158,6 +158,7 @@ input {
   line-height: 30px;
   outline: none !important;
   width: 100%;
+  font-weight: 500;
 }
 input[type="submit"] {
   background: none;

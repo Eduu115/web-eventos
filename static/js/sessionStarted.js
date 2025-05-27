@@ -1,11 +1,11 @@
 // obtener el usuario
-const usuario = JSON.parse(localStorage.getItem('user') || '{}');
+const usuario = JSON.parse(localStorage.getItem('user'));
 // obtener datos boton 1
 const cont_boton_entrar = document.getElementById("login-btn");
 const cont_boton_entrar_dos = document.getElementById("contenedor-boton-inicio");
 
 // si no es nulo
-if (usuario != null ){
+if (usuario != null || usuario != undefined){
     console.log("no es nulo");
     cont_boton_entrar.innerHTML = " "; // limpio btn 1
     // sustituir boton 1
