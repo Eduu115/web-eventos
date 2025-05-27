@@ -118,9 +118,18 @@ function renderEventosD() {
     </div>
   `;
     col1.appendChild(card);
-    //reservarClick
+    //reserva call
     let btn_reservar = col1.querySelector(".btn-outline-light");
-    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento));
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        d.idEvento,
+        document.getElementById(`cantidad-${d.idEvento}`).value,
+        document.getElementById(`observaciones-${d.idEvento}`).value,
+        d.precio
+      )
+
+    })
 
   });
   destacados.slice(2, 4).forEach(d => {
@@ -202,7 +211,16 @@ function renderEventosD() {
     col2.appendChild(card);
     //reserva call
     let btn_reservar = col2.querySelector(".btn-outline-light");
-    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento));
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        d.idEvento,
+        document.getElementById(`cantidad-${d.idEvento}`).value,
+        document.getElementById(`observaciones-${d.idEvento}`).value,
+        d.precio
+      )
+
+    })
   });
 }
 
@@ -299,7 +317,16 @@ function renderEventosA() {
     col1.appendChild(card);
     //reserva call
     let btn_reservar = col1.querySelector(".btn-outline-light");
-    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento))
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        d.idEvento,
+        document.getElementById(`cantidad-${d.idEvento}`).value,
+        document.getElementById(`observaciones-${d.idEvento}`).value,
+        d.precio
+      )
+
+    })
   });
   activosNoD.slice(2, 4).forEach(d => {
     const modalId = `infoModal-${d.idEvento}`; // id único para cada modal
@@ -380,7 +407,16 @@ function renderEventosA() {
     col2.appendChild(card);
     //reserva call
     let btn_reservar = col2.querySelector(".btn-outline-light");
-    btn_reservar.addEventListener("click", () => resrvarEvento(d.idEvento))
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        d.idEvento,
+        document.getElementById(`cantidad-${d.idEvento}`).value,
+        document.getElementById(`observaciones-${d.idEvento}`).value,
+        d.precio
+      )
+
+    })
   });
 }
 
