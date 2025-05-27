@@ -42,7 +42,6 @@ section {
   flex-direction: column;
 }
 
-
 .card img {
   width: 100%;             
   height: 250px;            
@@ -94,186 +93,142 @@ span {
 #contacto {
   display: flex;
   max-height: 80%;
-}
-
-/* CARD CONTACTO BS */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.background {
-  display: flex;
-  min-height: 100%;
-  background-color: #f64001;
-  width: 100%;
-  flex-direction: column;
-}
-
-.container {
-  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
   align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 10px;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  background-color: #f64001;
+  margin-left: -10px;
+}
+
+/* Reemplazado: Estilos para container y contenido dentro de #contacto */
+#contacto .container {
+  background-color: #2f3640;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  overflow: hidden;
 }
 
 .screen {
-  position: relative;
-  background: #1e272b;
-  border-radius: 15px;
-  width: 70%;
-}
-
-.screen:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2f3640;
+  border-radius: 10px;
+  padding: 2rem;
+  color: white;
 }
 
 .screen-header {
   display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: #4d4d4f;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
-.screen-header-left {
-  margin-right: auto;
-}
-
-.screen-header-button {
+.screen-header-left .screen-header-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 3px;
-  border-radius: 8px;
-  background: white;
-}
-
-.screen-header-button.close {
-  background: #ed1c6f;
+  background-color: #ff5f56; /* red */
 }
 
 .screen-header-button.maximize {
-  background: #e8e925;
+  background-color: #ffbd2e; /* yellow */
 }
 
 .screen-header-button.minimize {
-  background: #74c54f;
+  background-color: #27c93f; /* green */
 }
 
-.screen-header-right {
-  display: flex;
-}
-
-.screen-header-ellipsis {
-  width: 3px;
-  height: 3px;
-  margin-left: 2px;
-  border-radius: 8px;
-  background: #999;
+.screen-header-right .screen-header-ellipsis {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  margin-left: 6px;
 }
 
 .screen-body {
   display: flex;
-}
-
-.screen-body-item {
-  flex: 1;
-  padding: 50px;
+  width: 100%;
+  gap: 2rem;
 }
 
 .screen-body-item.left {
-  display: flex;
-  flex-direction: column;
+  flex: 1 1 35%;
 }
 
-.app-title {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  color: #ea1d6f;
-  font-size: 26px;
+.screen-body-item {
+  flex: 1 1 65%;
 }
 
-.app-title:after {
-  content: "";
+.screen-body-item.left .app-title span {
+  font-size: 2rem;
+  font-weight: 700;
   display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: #f64001;
+  margin-bottom: 1rem;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-.app-contact {
-  margin-top: auto;
-  font-size: 8px;
-  color: #888;
+.screen-body-item.left .app-contact {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.app-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .app-form-group {
-  margin-bottom: 15px;
-}
-
-.app-form-group.message {
-  margin-top: 40px;
-}
-
-.app-form-group.buttons {
-  margin-bottom: 0;
-  text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-form-control {
-  width: 100%;
-  padding: 10px 0;
-  background: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
   border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
-  font-size: 14px;
-  text-transform: uppercase;
+  font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s;
+  background-color: #3d4148;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
 .app-form-control::placeholder {
-  color: #666;
+  color: #bbb;
 }
 
 .app-form-control:focus {
-  border-bottom-color: #ddd;
+  background-color: #52575d;
+}
+
+.app-form-group.message .app-form-control {
+  height: 100px;
+  resize: vertical;
+}
+
+.app-form-group.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
 .app-form-button {
-  background: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
   border: none;
-  color: #f64001;
-  font-size: 14px;
   cursor: pointer;
-  outline: none;
-  padding: 5%;
+  font-weight: 700;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #f64001;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 
 .app-form-button:hover {
-  color: #922906;
+  background-color: #d83900;
 }
 
 .credits {
@@ -332,4 +287,3 @@ span {
     padding: 0;
   }
 }
-
