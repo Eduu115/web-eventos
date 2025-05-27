@@ -6,7 +6,9 @@ const usuario = JSON.parse(localStorage.getItem('user') || '{}');
 const deleteButton = col.querySelector(".btn-delete");
 row.appendChild(col);
 // ========================= Eventos ==============================
-deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
+document.addEventListener("DOMContentLoaded", ()=>{
+  deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
+});
 
 // ========================== FETCH ===============================
 // fetch cargamos los datos de las reservas
@@ -29,3 +31,18 @@ fetch(``, {})
   
 )
 .catch();
+
+function eliminarReserva(idReserva) {
+  fetch(`http://localhost:9003/reserva/eliminar/${idReserva}`, {
+    method: "DELETE",
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(() => {
+      reservas = reservas.filter((ev) => ev.idReserva !== idReserva);
+      renderizarReservas();
+    })
+    .catch((err) => console.error("Error al eliminar:", err));
+}
