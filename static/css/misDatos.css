@@ -1,11 +1,15 @@
-html, body{
+html{
     height: 100vh;
 }
+body{
+    height: 100%;
+}
 main {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5% 0 5% 0;
+    padding: 3% 0 3% 0;
     margin: 0;
     background-color: #F9F1E8;
 }
@@ -13,7 +17,13 @@ nav{
     background-color: #1E272B;
     border-bottom: 2px solid #F64001;
 }
-
+.logout-container{
+    flex: 1;
+}
+#btn-logout{
+    width: 200px;
+    margin: 10px;
+}
 .container {
     max-width: 400px;
     width: 100%;
