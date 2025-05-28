@@ -140,7 +140,43 @@ function renderizarFormulario (){
         let btn_cancelar = document.getElementById("boton-cancelar");
 
         formUpdate.addEventListener("submit", (event)=>{
+            // obtenemos datos del form del edit y montamos objeto
+            event.preventDefault();
+            const nombreActu = document.getElementById("nombre").value;
+            console.log(nombreActu);
+            
+            const apellidosActu = `${document.getElementById("apellido1").value +" "+ document.getElementById("apellido2").value}`;
+            console.log(apellidosActu);
+            
+            const emailActu = document.getElementById("email").value;
+            console.log(emailActu);
+            
+            let datosActu = {
+                email: emailActu,
+                nombre: nombreActu,
+                apellidos: apellidosActu
+            }
+            
+            console.log("objeto montado");
+            console.log(datosActu);
             // fetch update
+            fetch(`http://localhost:9003/usuario/actualizar/${usuario.idUsuario}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datosActu)                
+            }).then(response => {
+                if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                console.log("Usuario actualizado:", data);
+            })
+            .catch(error => {
+                console.error("Error al actualizar el usuario:", error);
+            });
+            
         });
 
         
