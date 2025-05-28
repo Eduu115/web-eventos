@@ -31,9 +31,27 @@ function eliminarReserva(idReserva) {
     .catch((err) => console.error("Error al eliminar:", err));
 }
 
-function editarReserva(){
-  // fetch edit
+function actualizarReserva(idReserva) {
+  fetch(`http://localhost:9003/reserva/actualizar/${idReserva}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body : JSON.stringify({
+      cantidad: document.getElementById('cantidadAct').value,
+      observaciones: document.getElementById('observacionesAct').value,
+    })
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Reserva actualizada:", data);
+    })
+    .catch((err) => console.error("Error al hacer update:", err));
 }
+
 
 
 // =============================================== RENDER ==================================================
@@ -77,12 +95,13 @@ function renderizarReservas(){
           <div class="card card-body d-flex justify-content-center align-items-center ">
             <div class="evento-detalles d-flex flex-row align-items-center">
               <p><strong>Cantidad:</strong>
-                  <input type="text" class="form-control" value="${r.cantidad}">
+                  <input id="cantidadAct" type="text" class="form-control" value="${r.cantidad}">
                 </p>
                 <p><strong>Observaciones:</strong>
-                  <input type="text" class="form-control" value="${r.observaciones}">
+                  <input id="observacionesAct" type="text" class="form-control" value="${r.observaciones}">
                 </p>
-                <button class="btn btn-primary">Guardar cambios</button>
+                <button id="btn-update" data-id="${r.idReserva
+                }" class="btn btn-primary">Guardar cambios</button>
             </div>
             
           </div>
@@ -93,6 +112,9 @@ function renderizarReservas(){
       
       let deleteButton = col.querySelector(".btn-delete");
       deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
+
+      const updateButton = col.querySelector("#btn-update");
+      updateButton.addEventListener("click", () => actualizarReserva(r.idReserva));
       
     });
     let editButton = col.querySelector("btn-edit");
