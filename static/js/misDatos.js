@@ -141,7 +141,7 @@ function renderizarFormulario (){
 
         formUpdate.addEventListener("submit", (event)=>{
             // obtenemos datos del form del edit y montamos objeto
-            event.preventDefault();
+            // event.preventDefault();
             const nombreActu = document.getElementById("nombre").value;
             console.log(nombreActu);
             
