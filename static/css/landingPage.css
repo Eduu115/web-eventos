@@ -44,6 +44,10 @@
   font-weight: 500;
 }
 
+.btn-no-te-lo-pierdas{
+  font-weight: 300;
+}
+
 .login-btn {
   border-color: #f64001;
   position: absolute;

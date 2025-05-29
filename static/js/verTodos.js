@@ -54,7 +54,7 @@ function renderEventos(lista, seccionId) {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${evento.nombre} </h5>
                     <img src="${evento.rutaImagen}" alt="FotoEvento" id="modalImage-${evento.id}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>

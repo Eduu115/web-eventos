@@ -33,10 +33,10 @@ function renderizarReservas() {
         <h5 class="card-title">EMAIL</h5>
       </div>
       <div class="col-md-2">
-        <h5 class="card-title">PERFIL </h5>
+        <h5 class="card-title">PERFIL</h5>
       </div>
       <div class="col-md-1">
-        <h5 class="card-title">CANTIDAD </h5>
+        <h5 class="card-title">CANT</h5>
       </div>
       <div class="col-md-2 border-0">
         <h5 class="card-title">INGRESOS</h5>

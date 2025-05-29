@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector('#apellido1').addEventListener('focus', () => animatePath(0));
     document.querySelector('#nombre').addEventListener('focus', () => animatePath(-336));
-    document.querySelector('#email').addEventListener('focus', () => animatePath(-672));
+    document.querySelector('#email').addEventListener('focus', () => animatePath(-664));
 });

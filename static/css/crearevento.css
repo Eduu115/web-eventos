@@ -20,7 +20,7 @@ color: white;
 
 
 body {
-  background-color: rgb(51, 50, 50);
+  background-color:#1E272B;
   margin: 0;
   padding: 0;
 }
@@ -60,8 +60,8 @@ button {
 h2{
   color: white;
   text-align: center;
-  margin-bottom: 30px;
-  margin-top: 90px;
+  margin-bottom: 1%;
+  margin-top: 2%;
   font-size: 60px;
 
 }
@@ -140,7 +140,7 @@ textarea{
 
 
 footer {
-  background-color: #1E272B;
+  background-color: #F64001;
   padding: 10px 5px;
 }
 
@@ -244,4 +244,9 @@ footer {
 
 .redesSociales_2 i {
   font-size: 22px;
+}
+
+main{
+  height: 90%;
+  max-height: 100vh;
 }
