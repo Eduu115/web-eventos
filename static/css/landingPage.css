@@ -210,6 +210,7 @@ span {
   cursor: pointer;
   padding: 8px;
   font-size: 22px;
+  margin-right: 250px;
 }
 
 .boton-flecha-elemento:hover {

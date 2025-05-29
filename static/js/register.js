@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             console.log("Usuario creado:", data);
+            window.location.href = "login.html";
         })
         .catch(error => {
             console.error("Error al crear el usuario:", error);
