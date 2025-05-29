@@ -1,3 +1,4 @@
+
 usuario = JSON.parse(localStorage.getItem('user') || '{}');
 console.log(usuario);
 let destacados = [];
@@ -7,24 +8,24 @@ let soldOut = [];
 // fetch filtrado por dest
 fetch('http://localhost:9003/evento/activoAndDestacado/S')
   .then(res => res.json())
-  .then(data =>{
+  .then(data => {
     destacados = data;
     renderEventosD();
   });
 // fetch filtrado por act
 fetch('http://localhost:9003/evento/activoAndDestacado/N')
   .then(res => res.json())
-  .then(data =>{
+  .then(data => {
     activosNoD = data;
     renderEventosA();
   });
 // fetch filtrado por sold-out
 fetch('http://localhost:9003/evento/estado/TERMINADO')
-.then(res => res.json())
-.then(data => {
-  soldOut = data;
-  renderEventosSoldOut();
-});
+  .then(res => res.json())
+  .then(data => {
+    soldOut = data;
+    renderEventosSoldOut();
+  });
 
 // ======================================== DESTACADOS ===========================
 
@@ -63,7 +64,7 @@ function renderEventosD() {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${d.nombre} </h5>
                     <img src="${d.rutaImagen}" alt="FotoEvento" id="modalImage-${d.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
@@ -618,7 +619,7 @@ function renderEventosSoldOut() {
   });
 }
 
-function resrvarEvento(idEvento, cantidad, observaciones, precioVenta){
+function resrvarEvento(idEvento, cantidad, observaciones, precioVenta) {
   // reservar un evento, mandar al fetch la id evento y la id user unicamente las id
   // ademas de cantidad y anotacion
   const idUsuario = usuario.idUsuario;
@@ -639,13 +640,14 @@ function resrvarEvento(idEvento, cantidad, observaciones, precioVenta){
     },
     body: JSON.stringify(reservaDTO)
   })
-  .then(res => {
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.json();
-  })
-  .then(data => {
-    console.log("Reserva realizada:", data);
-    // Opcional: mostrar mensaje de éxito, cerrar modal, etc.
-  })
-  .catch(err => console.error("Error al enviar:", err));
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      console.log("Reserva realizada:", data);
+      window.location.href = "/misReservas.html";
+      // Opcional: mostrar mensaje de éxito, cerrar modal, etc.
+    })
+    .catch(err => console.error("Error al enviar:", err));
 }
