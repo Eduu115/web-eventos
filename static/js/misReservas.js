@@ -48,6 +48,7 @@ function actualizarReserva(idReserva) {
     })
     .then((data) => {
       console.log("Reserva actualizada:", data);
+      window.location.reload();
     })
     .catch((err) => console.error("Error al hacer update:", err));
 }
@@ -113,8 +114,8 @@ function renderizarReservas(){
       let deleteButton = col.querySelector(".btn-delete");
       deleteButton.addEventListener("click", () => eliminarReserva(r.idReserva));
 
-      const updateButton = col.querySelector("#btn-update");
-      updateButton.addEventListener("click", () => actualizarReserva(r.idReserva));
+      let updateButton = col.querySelector("#btn-update");
+      updateButton.addEventListener("click", function(){actualizarReserva(r.idReserva);});
       
     });
     let editButton = col.querySelector("btn-edit");

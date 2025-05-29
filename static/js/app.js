@@ -24,22 +24,25 @@ function eliminarReserva(idEvento) {
 }
 
 function actualizarReserva(idEvento) {
+  const getValue = (field) =>
+    document.getElementById(`${field}-${idEvento}`).value;
+
   fetch(`http://localhost:9003/evento/actualizar/${idEvento}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body : JSON.stringify({
-      nombre: document.getElementById('nombreAct').value,
-      descripcion: document.getElementById('descripcionAct').value,
-      fechaInicio: document.getElementById('fechaInicioAct').value,
-      duracion: document.getElementById('duracionAct').value,
-      direccion: document.getElementById('direccionAct').value,
-      aforoMaximo: document.getElementById('aforoMaximoAct').value,
-      precio: document.getElementById('precioAct').value,
-      estado: document.getElementById('estadoAct').value,
-      destacado: document.getElementById('destacadoAct').value
-    })
+    body: JSON.stringify({
+      nombre: getValue("nombreAct"),
+      descripcion: getValue("descripcionAct"),
+      fechaInicio: getValue("fechaInicioAct"),
+      duracion: getValue("duracionAct"),
+      direccion: getValue("direccionAct"),
+      aforoMaximo: getValue("aforoMaximoAct"),
+      precio: getValue("precioAct"),
+      estado: getValue("estadoAct"),
+      destacado: getValue("destacadoAct"),
+    }),
   })
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -47,9 +50,16 @@ function actualizarReserva(idEvento) {
     })
     .then((data) => {
       console.log("Evento actualizado:", data);
+      // Opcional: actualiza localmente
+      const index = reservas.findIndex((r) => r.idEvento === idEvento);
+      if (index !== -1) {
+        reservas[index] = { ...reservas[index], ...data };
+        renderizarReservas(); // re-render
+      }
     })
     .catch((err) => console.error("Error al hacer update:", err));
 }
+
 
 //------------------------Trabajamos con el array olvidando el JSON
 // CRUD
@@ -121,59 +131,54 @@ function renderizarReservas() {
       </div>
     </div>
 
-<div class="collapse mt-2" id="collapse-editar-${r.idEvento}">
-  <div class="card card-body">
-    <div class="evento-detalles d-flex gap-4 flex-wrap">
-      <div class="detalle-columna flex-fill">
-       <p><strong>Nombre:</strong>
-          <input id="nombreAct" type="text" class="form-control" value="${r.nombre}">
-        </p>
-        <p><strong>Descripción:</strong>
-          <input id="descripcionAct" type="text" class="form-control" value="${r.descripcion}">
-        </p>
-        <p><strong>Fecha de Inicio:</strong>
-          <input id="fechaInicioAct" type="date" class="form-control" value="${r.fechaInicio}">
-        </p>
-        <p><strong>Duración:</strong>
-          <input id="duracionAct" type="text" class="form-control" value="${r.duracion}">
-        </p>
-        <p><strong>Dirección:</strong>
-          <input id="direccionAct" type="text" class="form-control" value="${r.direccion}">
-        </p>
-      </div>
-      <div class="detalle-columna flex-fill">
-        <p><strong>Aforo Máximo:</strong>
-          <input id="aforoMaximoAct" type="number" class="form-control" value="${r.aforoMaximo}">
-        </p>
-        <p><strong>Precio:</strong>
-          <input id="precioAct" type="number" class="form-control" value="${r.precio}">
-        </p>
-        <p><strong>Estado:</strong>
-           <select id="estadoAct" class="form-control">
-            <option value="ACTIVO" ${r.estado === 'ACTIVO' ? 'selected' : ''}>ACTIVO</option>
-            <option value="CANCELADO" ${r.estado === 'CANCELADO' ? 'selected' : ''}>CANCELADO</option>
-            <option value="FINALIZADO" ${r.estado === 'FINALIZADO' ? 'selected' : ''}>FINALIZADO</option>
-          </select>
-        </p>
-        <p><strong>Destacado:</strong>
-          <select id="destacadoAct" class="form-control">
+    <div class="collapse mt-2" id="collapse-editar-${r.idEvento}">
+    <div class="card card-body">
+      <div class="evento-detalles d-flex gap-4 flex-wrap">
+        <div class="detalle-columna flex-fill">
+          <p><strong>Nombre:</strong>
+            <input id="nombreAct-${r.idEvento}" type="text" class="form-control" value="${r.nombre}">
+          </p>
+          <p><strong>Descripción:</strong>
+            <input id="descripcionAct-${r.idEvento}" type="text" class="form-control" value="${r.descripcion}">
+          </p>
+          <p><strong>Fecha de Inicio:</strong>
+            <input id="fechaInicioAct-${r.idEvento}" type="date" class="form-control" value="${r.fechaInicio}">
+          </p>
+          <p><strong>Duración:</strong>
+            <input id="duracionAct-${r.idEvento}" type="text" class="form-control" value="${r.duracion}">
+          </p>
+          <p><strong>Dirección:</strong>
+            <input id="direccionAct-${r.idEvento}" type="text" class="form-control" value="${r.direccion}">
+          </p>
+        </div>
+        <div class="detalle-columna flex-fill">
+          <p><strong>Aforo Máximo:</strong>
+            <input id="aforoMaximoAct-${r.idEvento}" type="number" class="form-control" value="${r.aforoMaximo}">
+          </p>
+          <p><strong>Precio:</strong>
+            <input id="precioAct-${r.idEvento}" type="number" class="form-control" value="${r.precio}">
+          </p>
+          <p><strong>Estado:</strong>
+            <select id="estadoAct-${r.idEvento}" class="form-control">
+              <option value="ACTIVO" ${r.estado === 'ACTIVO' ? 'selected' : ''}>ACTIVO</option>
+              <option value="CANCELADO" ${r.estado === 'CANCELADO' ? 'selected' : ''}>CANCELADO</option>
+              <option value="FINALIZADO" ${r.estado === 'FINALIZADO' ? 'selected' : ''}>FINALIZADO</option>
+            </select>
+          </p>
+          <p><strong>Destacado:</strong>
+            <select id="destacadoAct-${r.idEvento}" class="form-control">
               <option value="S" ${r.destacado === 'S' ? 'selected' : ''}>Sí</option>
               <option value="N" ${r.destacado === 'N' ? 'selected' : ''}>No</option>
-          </select>
-        </p>
-        
-
+            </select>
+          </p>
+        </div>
       </div>
-      
+      <div class="d-flex justify-content-center guardarEditar mt-3">
+        <button id="btn-update" data-id="${r.idEvento}" class="btn btn-primary">Guardar cambios</button>
+      </div>
     </div>
-    <div class="d-flex justify-content-center guardarEditar mt-3">
-                  <button id="btn-update" data-id="${r.idEvento
-                  }" class="btn btn-primary">Guardar cambios</button>
-
-</div>
-    
   </div>
-</div>
+  
 
     
     `;
@@ -182,7 +187,7 @@ function renderizarReservas() {
     deleteButton.addEventListener("click", () => eliminarReserva(r.idEvento));
 
     const updateButton = col.querySelector("#btn-update");
-    updateButton.addEventListener("click", () => actualizarReserva(r.idEvento));
+    updateButton.addEventListener("click", function(){actualizarReserva(r.idEvento); renderizarReservas();} );
 
     let verReservasButton = col.querySelector(".btn-reservas");
     verReservasButton.addEventListener("click", () => {

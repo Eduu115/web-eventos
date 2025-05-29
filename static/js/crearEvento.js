@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
           tipos = data;
       });
 
-    btn_enviar.addEventListener('submit', (event) => {
+    formulario.addEventListener('submit', (event) => {
         event.preventDefault();
 
         let seleccionado = (document.getElementById("tipo").value === "CONCIERTO") ? 0 : 1;
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fechaAlta: document.getElementById("fechaAlta").value,
             tipo: seleccionadoTipo
         };
-
+        console.log(datos);
         fetch("http://localhost:9003/evento/crearEvento", {
             method: 'POST',
             headers: {
