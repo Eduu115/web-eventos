@@ -90,9 +90,21 @@ function renderizarReservas() {
   <div class="collapse mt-2" id="collapse-editar-${r.idReserva}">
     <div class="card card-body d-flex justify-content-center align-items-center ">
       <div class="evento-detalles d-flex flex-row align-items-center">
-        <p><strong>Cantidad:</strong>
-          <input id="cantidadAct-${r.idReserva}" type="text" class="form-control" value="${r.cantidad}">
-        </p>
+        <div>
+          <label for="cantidadAct-${r.idReserva}"><strong>Cantidad: (actual: ${r.cantidad})</strong></label>
+          <select class="form-select custom-input"  id="cantidadAct-${r.idReserva}" name="cantidad" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
         <p><strong>Observaciones:</strong>
           <input id="observacionesAct-${r.idReserva}" type="text" class="form-control" value="${r.observaciones}">
         </p>

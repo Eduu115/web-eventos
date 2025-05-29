@@ -42,7 +42,7 @@ btn_enviar.addEventListener('submit', (event) =>{
         return response.json();
     }).then( data => {
         console.log("usuario validado, pasamos al usuario final todo");
-        console.log("🚀 Datos recibidos del backend:", data);
+        console.log("Datos recibidos del backend:", data);
         //obtenemos el resultado del fetch
         usuarioFinal = data
         //guardamos el resultado del fetch en LS
@@ -63,7 +63,7 @@ btn_enviar.addEventListener('submit', (event) =>{
     
     function saveDataToLocalStorage(x){       
         var receivedData = JSON.stringify(x);
-        alert(receivedData);
+        console.log(receivedData);
         localStorage.setItem('user', receivedData);
     }
 
