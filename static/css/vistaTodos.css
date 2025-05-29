@@ -43,12 +43,10 @@ section {
 }
 
 .card img {
-  width: 100%;             
-  height: 250px;            
-  object-fit: cover;        
-  object-position: center;  
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
 }
 .card-body {
   flex: 1 1 auto;
@@ -93,7 +91,7 @@ span {
 #contacto {
   display: flex;
   max-height: 80%;
-  justify-content: center;  /* Centra horizontalmente */
+  justify-content: center; /* Centra horizontalmente */
   align-items: center;
   background-color: #f64001;
   margin-left: -10px;
@@ -103,7 +101,7 @@ span {
 #contacto .container {
   background-color: #2f3640;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
 
