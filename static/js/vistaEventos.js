@@ -73,7 +73,7 @@ function renderEventosD() {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${d.descripcion} </strong></p>
-                    <p><strong>Duración: ${d.duracion + d.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${d.duracion + " " + d.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${d.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${d.fechaInicio}</strong></p>
                     <p><strong>Precio: ${d.precio}€</strong></p>
@@ -120,7 +120,7 @@ function renderEventosD() {
   `;
     col1.appendChild(card);
     //reserva call
-    let btn_reservar = col1.querySelector(".btn-outline-light");
+    let btn_reservar = card.querySelector(".btn-outline-light");
     btn_reservar.addEventListener("click", (event) => {
       event.preventDefault();
       resrvarEvento(
@@ -155,7 +155,7 @@ function renderEventosD() {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${d.nombre}</h5>
                     <img src="${d.rutaImagen}" alt="FotoEvento" id="modalImage-${d.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
@@ -164,7 +164,7 @@ function renderEventosD() {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${d.descripcion} </strong></p>
-                    <p><strong>Duración: ${d.duracion + d.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${d.duracion + " " + d.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${d.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${d.fechaInicio}</strong></p>
                     <p><strong>Precio: ${d.precio}€</strong></p>
@@ -211,7 +211,7 @@ function renderEventosD() {
   `;
     col2.appendChild(card);
     //reserva call
-    let btn_reservar = col2.querySelector(".btn-outline-light");
+    let btn_reservar = card.querySelector(".btn-outline-light");
     btn_reservar.addEventListener("click", (event) => {
       event.preventDefault();
       resrvarEvento(
@@ -261,7 +261,7 @@ function renderEventosA() {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${d.nombre} </h5>
                     <img src="${d.rutaImagen}" alt="FotoEvento" id="modalImage-${d.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
@@ -270,7 +270,7 @@ function renderEventosA() {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${d.descripcion} </strong></p>
-                    <p><strong>Duración: ${d.duracion + d.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${d.duracion + " " + d.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${d.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${d.fechaInicio}</strong></p>
                     <p><strong>Precio: ${d.precio}€</strong></p>
@@ -317,7 +317,7 @@ function renderEventosA() {
   `;
     col1.appendChild(card);
     //reserva call
-    let btn_reservar = col1.querySelector(".btn-outline-light");
+    let btn_reservar = card.querySelector(".btn-outline-light");
     btn_reservar.addEventListener("click", (event) => {
       event.preventDefault();
       resrvarEvento(
@@ -351,7 +351,7 @@ function renderEventosA() {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${d.nombre}</h5>
                     <img src="${d.rutaImagen}" alt="FotoEvento" id="modalImage-${d.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
@@ -360,7 +360,7 @@ function renderEventosA() {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${d.descripcion} </strong></p>
-                    <p><strong>Duración: ${d.duracion + d.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${d.duracion + " " + d.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${d.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${d.fechaInicio}</strong></p>
                     <p><strong>Precio: ${d.precio}€</strong></p>
@@ -407,7 +407,7 @@ function renderEventosA() {
   `;
     col2.appendChild(card);
     //reserva call
-    let btn_reservar = col2.querySelector(".btn-outline-light");
+    let btn_reservar = card.querySelector(".btn-outline-light");
     btn_reservar.addEventListener("click", (event) => {
       event.preventDefault();
       resrvarEvento(
@@ -457,7 +457,7 @@ function renderEventosSoldOut() {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${d.nombre}</h5>
                     <img src="${d.rutaImagen}" alt="FotoEvento" id="modalImage-${d.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
@@ -466,7 +466,7 @@ function renderEventosSoldOut() {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${d.descripcion} </strong></p>
-                    <p><strong>Duración: ${d.duracion + d.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${d.duracion + " " + d.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${d.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${d.fechaInicio}</strong></p>
                     <p><strong>Precio: ${d.precio}€</strong></p>
@@ -513,7 +513,7 @@ function renderEventosSoldOut() {
   `;
     col1.appendChild(card);
 
-    let btn_reservar = col1.querySelector(".btn-outline-light");
+    let btn_reservar = card.querySelector(".btn-outline-light");
     btn_reservar.addEventListener("click", (event) => {
       event.preventDefault();
       resrvarEvento(
@@ -548,7 +548,7 @@ function renderEventosSoldOut() {
               <div class="container-fluid">
                 <div class="row text-center mb-4">
                   <div class="col-12">
-                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: </h5>
+                    <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${d.nombre} </h5>
                     <img src="${d.rutaImagen}" alt="FotoEvento" id="modalImage-${d.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
@@ -557,7 +557,7 @@ function renderEventosSoldOut() {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${d.descripcion} </strong></p>
-                    <p><strong>Duración: ${d.duracion + d.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${d.duracion + " " + d.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${d.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${d.fechaInicio}</strong></p>
                     <p><strong>Precio: ${d.precio}€</strong></p>
@@ -604,7 +604,7 @@ function renderEventosSoldOut() {
   `;
     col2.appendChild(card);
     //reserva call
-    let btn_reservar = col2.querySelector(".btn-outline-light");
+    let btn_reservar = card.querySelector(".btn-outline-light");
     btn_reservar.addEventListener("click", (event) => {
       event.preventDefault();
       resrvarEvento(

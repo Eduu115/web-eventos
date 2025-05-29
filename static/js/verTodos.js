@@ -55,7 +55,7 @@ function renderEventos(lista, seccionId) {
                 <div class="row text-center mb-4">
                   <div class="col-12">
                     <h5 id="${modalId}-label" class="mb-3 titulos h2">Título: ${evento.nombre} </h5>
-                    <img src="${evento.rutaImagen}" alt="FotoEvento" id="modalImage-${evento.id}"
+                    <img src="${evento.rutaImagen}" alt="FotoEvento" id="modalImage-${evento.idEvento}"
                       class="img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                   </div>
                 </div>
@@ -63,7 +63,7 @@ function renderEventos(lista, seccionId) {
                 <div class="row">
                   <div class="col-md-6">
                     <p><strong>Descripción: ${evento.descripcion} </strong></p>
-                    <p><strong>Duración: ${evento.duracion + evento.unidadDuracion}</strong></p>
+                    <p><strong>Duración: ${evento.duracion + " " + evento.unidadDuracion}</strong></p>
                     <p><strong>Dirección: ${evento.direccion}</strong></p>
                     <p><strong>Fecha inicio: ${evento.fechaInicio}</strong></p>
                     <p><strong>Precio: ${evento.precio}€</strong></p>
@@ -71,16 +71,16 @@ function renderEventos(lista, seccionId) {
 
                   <div class="col-md-6 d-flex flex-column justify-content-between">
                     <div class="mb-3">
-                      <label for="observaciones-${evento.id}" class="form-label">Observaciones</label>
-                      <textarea class="form-control custom-input" id="observaciones-${evento.id}"
+                      <label for="observaciones-${evento.idEvento}" class="form-label">Observaciones</label>
+                      <textarea class="form-control custom-input" id="observaciones-${evento.idEvento}"
                         name="observaciones" rows="4"
                         placeholder="Anota tus observaciones aquí"></textarea>
                     </div>
 
                     <div class="row">
                       <div class="col-6">
-                        <label for="cantidad-${evento.id}" class="form-label">Cantidad</label>
-                        <select class="form-select custom-input" id="cantidad-${evento.id}"
+                        <label for="cantidad-${evento.idEvento}" class="form-label">Cantidad</label>
+                        <select class="form-select custom-input" id="cantidad-${evento.idEvento}"
                           name="cantidad" required>
                           <option value="">Selecciona</option>
                           <option value="1">1</option>
@@ -109,6 +109,51 @@ function renderEventos(lista, seccionId) {
     </div>
   `;
 
+
+
     contenedor.appendChild(card);
+    let btn_reservar = card.querySelector(".btn-outline-light");
+    btn_reservar.addEventListener("click", (event) => {
+      event.preventDefault();
+      resrvarEvento(
+        evento.idEvento,
+        document.getElementById(`cantidad-${evento.idEvento}`).value,
+        document.getElementById(`observaciones-${evento.idEvento}`).value,
+        evento.precio
+      );
+    });
+
   });
+}
+
+function resrvarEvento(idEvento, cantidad, observaciones, precioVenta) {
+  const usuario = JSON.parse(localStorage.getItem('user') || '{}');
+  const idUsuario = usuario.idUsuario;
+
+  const reservaDTO = {
+    idEvento: idEvento,
+    idUsuario: idUsuario,
+    cantidad: cantidad,
+    observaciones: observaciones,
+    precioVenta: precioVenta
+  };
+
+  console.log("Enviando reserva:", reservaDTO);
+
+  fetch('http://localhost:9003/reserva/altaReserva', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(reservaDTO)
+  })
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      console.log("Reserva realizada:", data);
+      window.location.href = "/misReservas.html";
+    })
+    .catch(err => console.error("Error al enviar:", err));
 }
