@@ -13,39 +13,39 @@ nav {
   min-height: 10%;
   align-items: center;
 }
-nav img{
+nav img {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-html{
+html {
   height: 100%;
 }
 
-nav h1{
+nav h1 {
   transform: scale(0.8);
 }
-nav i{
+nav i {
   transform: scale(0.6);
   padding-top: 1%;
-  color: #F14001;
+  color: #f14001;
 }
-.nav-title{
+.nav-title {
   transform: scale(1);
 }
-nav a{
+nav a {
   all: unset;
   color: white;
   cursor: pointer;
 }
 
 .custom-modal-style {
-  background-color: #1E272B;
+  background-color: #1e272b;
   border: 2px solid white;
 }
 
 .custom-input {
-  background-color: #1E272B;
+  background-color: #1e272b;
   color: white;
   border: 1px solid #ccc;
 }
@@ -55,19 +55,126 @@ nav a{
 }
 
 .custom-input:focus {
-  background-color: #1E272B;
+  background-color: #1e272b;
   color: white;
   border-color: #fff;
   box-shadow: none;
 }
 
-#bienvenido-saludo span{
-  color: #F14001;
+#bienvenido-saludo span {
+  color: #f14001;
   font-size: 22px;
 }
 
-#bienvenido-saludo{
+#bienvenido-saludo {
   flex: 1;
   padding-right: 2%;
   text-align: right;
+}
+
+footer {
+  background-color: #1e272b;
+  padding: 10px 5px;
+}
+
+#footer-section {
+  background-color: #f64001;
+  padding: 10px 5px;
+}
+
+#footer_logo {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: -30px;
+}
+
+#footer_logo img {
+  transform: scale(0.5);
+  transform-origin: center;
+  width: 150px;
+  height: auto;
+  border: 0;
+  box-shadow: 0px 0px 0px black;
+}
+
+.informacionContacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.responsables {
+  border-left: 1px solid black;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.redesSociales a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 15px;
+}
+.redesSociales a:hover {
+  font-weight: 700;
+}
+
+.redesSociales i {
+  font-size: 20px;
+}
+.responsables h4 {
+  font-size: 30px;
+}
+
+.about-us {
+  width: 70%;
+}
+
+#footer_text_and_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+}
+
+#footer_text_and_icons p {
+  margin: 0;
+  flex: 1;
+  max-width: 70%;
+  margin-left: 20px;
+}
+
+.redesSociales_2 p {
+  margin: 0;
+  color: white;
+}
+
+.redesSociales_2 a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.redesSociales_2 > div {
+  display: flex;
+  gap: 15px;
+  margin-left: -10;
+  padding-left: 0;
+}
+
+.redesSociales_2 a:hover {
+  color: #f64001;
+}
+
+.redesSociales_2 i {
+  font-size: 22px;
 }

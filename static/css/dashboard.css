@@ -219,3 +219,8 @@ footer {
   --bs-btn-disabled-border-color: #f64001;
   margin-left: -11%;
 }
+
+footer {
+  background-color: #f64001 !important;
+  padding: 10px 5px;
+}
