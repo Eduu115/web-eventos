@@ -11,17 +11,14 @@ This application is a front-end interface for managing and viewing events. It al
 ### Features
 
 - View a list of upcoming and past events
-- Search and filter events by date, category, or keywords
 - Add new events with detailed information
 - Edit or delete existing events
-- Responsive design for desktop and mobile devices
 - **Full CRUD operations with real-time database interaction**
 
 ### Requirements
 
-- [Node.js](https://nodejs.org/) (for running the front-end)
 - [Back-end-eventos by @Eduu115](https://github.com/Eduu115/Back-end-eventos) repository (SpringTools)
-- Alternatively, you can launch the front-end using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for Visual Studio Code
+- You can launch the front-end using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for Visual Studio Code
 
 > **Note:** When the Back-end-eventos is deployed, it runs by default at `http://localhost:9003`. If you have any doubts about the back-end address, use this URL.
 
@@ -56,17 +53,14 @@ Esta aplicación es una interfaz front-end para gestionar y visualizar eventos. 
 ### Características
 
 - Ver una lista de eventos próximos y pasados
-- Buscar y filtrar eventos por fecha, categoría o palabras clave
 - Añadir nuevos eventos con información detallada
 - Editar o eliminar eventos existentes
-- Diseño responsivo para dispositivos de escritorio y móviles
 - **Operaciones CRUD completas con interacción en tiempo real con la base de datos**
 
 ### Requisitos
 
-- [Node.js](https://nodejs.org/) (para ejecutar el front-end)
 - Repositorio [Back-end-eventos de @Eduu115](https://github.com/Eduu115/Back-end-eventos) (SpringTools)
-- Alternativamente, puedes lanzar el front-end usando la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para Visual Studio Code
+- Puedes lanzar el front-end usando la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para Visual Studio Code
 
 > **Nota:** Cuando el Back-end-eventos está desplegado, se ejecuta por defecto en `http://localhost:9003`. Si tienes dudas sobre la dirección del back-end, utiliza esta URL.
 
